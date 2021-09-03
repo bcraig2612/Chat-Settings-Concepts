@@ -180,18 +180,6 @@ table.table>thead>tr>th {
   }
 }
 
-@media (hover:none) {
-  a.set-time-sun,
-  a.set-time-mon,
-  a.set-time-tue,
-  a.set-time-wed,
-  a.set-time-thu,
-  a.set-time-fri,
-  a.set-time-sat {
-    display: none;
-  }
-}
-
 .table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-sun,
 .table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-mon,
 .table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-tue,

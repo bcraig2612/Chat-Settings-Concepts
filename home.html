@@ -619,9 +619,9 @@
                 }
             });
 
-            $(".custom-start-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "h:i K", defaultDate: "9:00 AM", wrap: true });
+            $(".custom-start-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "h:i K", defaultDate: "9:00 AM", wrap: true, disableMobile: "true" });
 
-            $(".custom-end-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "h:i K", defaultDate: "5:00 PM", wrap: true });
+            $(".custom-end-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "h:i K", defaultDate: "5:00 PM", wrap: true, disableMobile: "true" });
 
             $(document).ready(function() {
                 if ($('.activate-chat-checkbox-sun').prop('checked') == false) {
@@ -689,9 +689,7 @@
                     $(".tr-sunday").css({
                         backgroundColor: "#FFFFFF"
                     });
-                    if(!isMobile) {
-                        $('.set-time-sun').show();
-                    }
+                    $('.set-time-sun').show();
                 } else {
                     $('.start-time-sun').val('').hide();
                     $('.end-time-sun').val('').hide();
@@ -709,9 +707,7 @@
                     $(".tr-monday").css({
                         backgroundColor: "#FFFFFF"
                     });
-                    if(!isMobile) {
-                        $('.set-time-mon').show();
-                    }
+                    $('.set-time-mon').show();
                 } else {
                     $('.start-time-mon').val('').hide();
                     $('.end-time-mon').val('').hide();
@@ -729,9 +725,7 @@
                     $(".tr-tuesday").css({
                         backgroundColor: "#FFFFFF"
                     });
-                    if(!isMobile) {
-                        $('.set-time-tue').show();
-                    }
+                    $('.set-time-tue').show();
                 } else {
                     $('.start-time-tue').val('').hide();
                     $('.end-time-tue').val('').hide();
@@ -749,9 +743,7 @@
                     $(".tr-wednesday").css({
                         backgroundColor: "#FFFFFF"
                     });
-                    if(!isMobile) {
-                        $('.set-time-wed').show();
-                    }
+                    $('.set-time-wed').show();
                 } else {
                     $('.start-time-wed').val('').hide();
                     $('.end-time-wed').val('').hide();
@@ -769,9 +761,7 @@
                     $(".tr-thursday").css({
                         backgroundColor: "#FFFFFF"
                     });
-                    if(!isMobile) {
-                        $('.set-time-thu').show();
-                    }
+                    $('.set-time-thu').show();
                 } else {
                     $('.start-time-thu').val('').hide();
                     $('.end-time-thu').val('').hide();
@@ -789,9 +779,7 @@
                     $(".tr-friday").css({
                         backgroundColor: "#FFFFFF"
                     });
-                    if(!isMobile) {
-                        $('.set-time-fri').show();
-                    }
+                    $('.set-time-fri').show();
                 } else {
                     $('.start-time-fri').val('').hide();
                     $('.end-time-fri').val('').hide();
@@ -809,9 +797,7 @@
                     $(".tr-saturday").css({
                         backgroundColor: "#FFFFFF"
                     });
-                    if(!isMobile) {
-                        $('.set-time-sat').show();
-                    }
+                    $('.set-time-sat').show();
                 } else {
                     $('.start-time-sat').val('').hide();
                     $('.end-time-sat').val('').hide();
