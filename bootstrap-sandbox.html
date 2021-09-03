@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>Manage Settings</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/bootstrap.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-production-plugins.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-production.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-skins.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/stu_dashboard.css?v=2373">
+        <link rel="shortcut icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/favicon/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+        <link rel="apple-touch-icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/sptouch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-ipad-retina.png">
+        <link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+        <link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+        <link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+        <link rel="stylesheet" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/css/bootstrap-social-2763.css">
+        <link rel="stylesheet" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/css/intlTelInput-2373.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link rel="stylesheet" href="./bootstrap-sandbox.css">
+    </head>
+    <body class="smart-style-0">
+        <div id="content">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h1><i class="fa fa-comment fa-fw" aria-hidden="true"></i> Chat Customizations</h1>
+                        </div>
+                        <form name="chat_form" id="chat_form" method="post" action="/my-settings/chat/" class="smart-form" style="background-color: #f9f9f9;">
+                            <fieldset style="background-color: #f9f9f9;">
+                                <legend>Customer Service Availability</legend>
+                                <section>
+                                    <button type="button" id="showAvailabilityBtn" class="btn btn-sm" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        Update Availability&nbsp;&nbsp;<i id="myIcon" class="fa fa-chevron-right" style="font-size: 10px;" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="card card-body">
+                                            <table class="table availability-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Day</th>
+                                                        <th>Start Time</th>
+                                                        <th>End Time</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="tr-sunday">
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-sun" type="checkbox" />&nbsp;&nbsp;<span class="full-text">Sunday</span><span class="short-text">Sun</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-start-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 start-time-sun" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-sun" title="update start time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-end-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 end-time-sun" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-sun" title="update end time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-monday">
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-mon" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Monday</span><span class="short-text">Mon</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-start-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 start-time-mon" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-mon" title="update start time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-end-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 end-time-mon" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-mon" title="update end time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-tuesday">
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-tue" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Tuesday</span><span class="short-text">Tue</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-start-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 start-time-tue" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-tue" title="update start time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-end-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 end-time-tue" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-tue" title="update end time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-wednesday">
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-wed" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Wednesday</span><span class="short-text">Wed</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-start-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 start-time-wed" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-wed" title="update start time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-end-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 end-time-wed" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-wed" title="update end time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-thursday">
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-thu" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Thursday</span><span class="short-text">Thu</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-start-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 start-time-thu" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-thu" title="update start time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-end-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 end-time-thu" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-thu" title="update end time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-friday">
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-fri" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Friday</span><span class="short-text">Fri</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-start-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 start-time-fri" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-fri" title="update start time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-end-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 end-time-fri" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-fri" title="update end time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-saturday">
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-sat" type="checkbox" />&nbsp;&nbsp;<span class="full-text">Saturday</span><span class="short-text">Sat</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-start-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 start-time-sat" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-sat" title="update start time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-end-time input-group flex-cell">
+                                                                <input class="form-control hours-select2 end-time-sat" type="time" data-input="" readonly="readonly" />
+                                                                <a class="input-button set-time-sat" title="update end time" data-toggle=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h1><i class="fa fa-comment fa-fw" aria-hidden="true"></i> Chat Customizations</h1>
+                        </div>
+                        <form name="chat_form" id="chat_form" method="post" action="/my-settings/chat/" class="smart-form" style="background-color: #f9f9f9;">
+                            <fieldset style="background-color: #f9f9f9;">
+                                <legend>Customer Service Availability</legend>
+                                <section>
+                                    <button type="button" id="showAvailabilityBtn2" class="btn btn-sm" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                                        Update Availability&nbsp;&nbsp;<i id="myIcon2" class="fa fa-chevron-right" style="font-size: 10px;" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="collapse" id="collapseExample2">
+                                        <div class="card card-body">
+                                            <table class="table availability-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Day</th>
+                                                        <th>Start Time</th>
+                                                        <th>End Time</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-sun2" type="checkbox" />&nbsp;&nbsp;<span class="full-text">Sunday</span><span class="short-text">Sun</span> </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select start-time-sun2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night start-sun">
+                                                                    <option>AM</option>
+                                                                    <option>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select end-time-sun2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night end-sun">
+                                                                    <option>AM</option>
+                                                                    <option>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-mon2" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Monday</span><span class="short-text">Mon</span> </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select start-time-mon2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option selected>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night start-mon">
+                                                                    <option selected>AM</option>
+                                                                    <option>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select end-time-mon2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option selected>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night end-mon">
+                                                                    <option>AM</option>
+                                                                    <option selected>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-tue2" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Tuesday</span><span class="short-text">Tue</span> </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select start-time-tue2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option selected>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night start-tue">
+                                                                    <option selected>AM</option>
+                                                                    <option>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select end-time-tue2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option selected>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night end-tue">
+                                                                    <option>AM</option>
+                                                                    <option selected>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-wed2" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Wednesday</span><span class="short-text">Wed</span> </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select start-time-wed2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option selected>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night start-wed">
+                                                                    <option selected>AM</option>
+                                                                    <option>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select end-time-wed2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option selected>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night end-wed">
+                                                                    <option>AM</option>
+                                                                    <option selected>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-thu2" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Thursday</span><span class="short-text">Thu</span> </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select start-time-thu2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option selected>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night start-thu">
+                                                                    <option selected>AM</option>
+                                                                    <option>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select end-time-thu2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option selected>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night end-thu">
+                                                                    <option>AM</option>
+                                                                    <option selected>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-fri2" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Friday</span><span class="short-text">Fri</span> </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select start-time-fri2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option selected>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night start-fri">
+                                                                    <option selected>AM</option>
+                                                                    <option>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select end-time-fri2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option selected>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night end-fri">
+                                                                    <option>AM</option>
+                                                                    <option selected>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekday">
+                                                            <div class="flex-cell">
+                                                                <input class="activate-chat-checkbox-sat2" type="checkbox" />&nbsp;&nbsp;<span class="full-text">Saturday</span><span class="short-text">Sat</span> </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select start-time-sat2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night start-sat">
+                                                                    <option>AM</option>
+                                                                    <option>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="flex-cell">
+                                                                <select class="form-control hours-select end-time-sat2">
+                                                                    <option>12:00</option>
+                                                                    <option>01:00</option>
+                                                                    <option>02:00</option>
+                                                                    <option>03:00</option>
+                                                                    <option>04:00</option>
+                                                                    <option>05:00</option>
+                                                                    <option>06:00</option>
+                                                                    <option>07:00</option>
+                                                                    <option>08:00</option>
+                                                                    <option>09:00</option>
+                                                                    <option>10:00</option>
+                                                                    <option>11:00</option>
+                                                                </select>
+                                                                <select class="form-control day-or-night end-sat">
+                                                                    <option>AM</option>
+                                                                    <option>PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script data-pace-options='{ "restartOnRequestAfter": true }' src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/pace/pace.min.js?v=2373"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/app.config.js"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js?v=2373"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/bootstrap/bootstrap.min.js"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/notification/SmartNotification.min.js"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/smartwidgets/jarvis.widget.min.js"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js?v=2373"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/sparkline/jquery.sparkline.min.js?v=2373"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/jquery-validate/jquery.validate.min.js?v=2373"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/masked-input/jquery.maskedinput.min.js?v=2373"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/select2/select2.min.js?v=2373"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/bootstrap-slider/bootstrap-slider.min.js?v=2373"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/msie-fix/jquery.mb.browser.min.js?v=2373"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/fastclick/fastclick.min.js?v=2373"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/app.min.js"></script>
+        <script src="/js/plugin/colorpicker/bootstrap-colorpicker.min.js"></script>
+        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/js/intlTelInput-2373.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<!-- ============================================================================================================================= -->
+        <script>
+            $('#showAvailabilityBtn').click(function() {
+                if ($('#myIcon').hasClass('fa-chevron-right')) {
+                    $('#myIcon').removeClass('fa-chevron-right'); $('#myIcon').addClass('fa-chevron-down');
+                } else {
+                    $('#myIcon').removeClass('fa-chevron-down'); $('#myIcon').addClass('fa-chevron-right');
+                }
+            });
+
+            $(".custom-start-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "H:i", defaultDate: "09:00", wrap: true, disableMobile: "true" });
+
+            $(".custom-end-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "H:i", defaultDate: "17:00", wrap: true, disableMobile: "true" });
+
+            $(document).ready(function() {
+                if ($('.activate-chat-checkbox-sun').prop('checked') == false) { $('.start-time-sun').val('').hide(); $('.end-time-sun').val('').hide(); $('.set-time-sun').hide(); $(".tr-sunday").css({backgroundColor: "#EEEEEE"}); }
+                if($('.activate-chat-checkbox-mon').prop('checked') == false) { $('.start-time-mon').val('').hide(); $('.end-time-mon').val('').hide(); $('.set-time-mon').hide(); $(".tr-monday").css({backgroundColor: "#EEEEEE"}); }
+                if($('.activate-chat-checkbox-tue').prop('checked') == false) { $('.start-time-tue').val('').hide(); $('.end-time-tue').val('').hide(); $('.set-time-tue').hide(); $(".tr-tuesday").css({backgroundColor: "#EEEEEE"}); }
+                if($('.activate-chat-checkbox-wed').prop('checked') == false) { $('.start-time-wed').val('').hide(); $('.end-time-wed').val('').hide(); $('.set-time-wed').hide(); $(".tr-wednesday").css({backgroundColor: "#EEEEEE"}); }
+                if($('.activate-chat-checkbox-thu').prop('checked') == false) { $('.start-time-thu').val('').hide(); $('.end-time-thu').val('').hide(); $('.set-time-thu').hide(); $(".tr-thursday").css({backgroundColor: "#EEEEEE"}); }
+                if($('.activate-chat-checkbox-fri').prop('checked') == false) { $('.start-time-fri').val('').hide(); $('.end-time-fri').val('').hide(); $('.set-time-fri').hide(); $(".tr-friday").css({backgroundColor: "#FFFFFF"}); }
+                if($('.activate-chat-checkbox-sat').prop('checked') == false) { $('.start-time-sat').val('').hide(); $('.end-time-sat').val('').hide(); $('.set-time-sat').hide(); $(".tr-saturday").css({backgroundColor: "#EEEEEE"}); }
+            });
+
+            $('.activate-chat-checkbox-sun').change(function() {
+                if ($('.activate-chat-checkbox-sun').prop('checked') == true) {
+                    $('.start-time-sun').val('09:00').show(); $('.end-time-sun').val('17:00').show(); $('.set-time-sun').show(); $(".tr-sunday").css({backgroundColor: "#FFFFFF"});
+                } else {
+                    $('.start-time-sun').val('').hide(); $('.end-time-sun').val('').hide(); $('.set-time-sun').hide(); $(".tr-sunday").css({backgroundColor: "#EEEEEE"});
+                }
+            });
+
+            $('.activate-chat-checkbox-mon').change(function() {
+                if ($('.activate-chat-checkbox-mon').prop('checked') == true) {
+                    $('.start-time-mon').val('09:00').show(); $('.end-time-mon').val('17:00').show(); $('.set-time-mon').show(); $(".tr-monday").css({backgroundColor: "#FFFFFF"});
+                } else {
+                    $('.start-time-mon').val('').hide(); $('.end-time-mon').val('').hide(); $('.set-time-mon').hide(); $(".tr-monday").css({backgroundColor: "#EEEEEE"});
+                }
+            });
+
+            $('.activate-chat-checkbox-tue').change(function() {
+                if ($('.activate-chat-checkbox-tue').prop('checked') == true) {
+                    $('.start-time-tue').val('09:00').show(); $('.end-time-tue').val('17:00').show(); $('.set-time-tue').show(); $(".tr-tuesday").css({backgroundColor: "#FFFFFF"});
+                } else {
+                    $('.start-time-tue').val('').hide(); $('.end-time-tue').val('').hide(); $('.set-time-tue').hide(); $(".tr-tuesday").css({backgroundColor: "#EEEEEE"});
+                }
+            });
+
+            $('.activate-chat-checkbox-wed').change(function() {
+                if ($('.activate-chat-checkbox-wed').prop('checked') == true) {
+                    $('.start-time-wed').val('09:00').show(); $('.end-time-wed').val('17:00').show(); $('.set-time-wed').show(); $(".tr-wednesday").css({backgroundColor: "#FFFFFF"});
+                } else {
+                    $('.start-time-wed').val('').hide(); $('.end-time-wed').val('').hide(); $('.set-time-wed').hide(); $(".tr-wednesday").css({backgroundColor: "#EEEEEE"});
+                }
+            });
+
+            $('.activate-chat-checkbox-thu').change(function() {
+                if ($('.activate-chat-checkbox-thu').prop('checked') == true) {
+                    $('.start-time-thu').val('09:00').show(); $('.end-time-thu').val('17:00').show(); $('.set-time-thu').show(); $(".tr-thursday").css({backgroundColor: "#FFFFFF"});
+                } else {
+                    $('.start-time-thu').val('').hide(); $('.end-time-thu').val('').hide(); $('.set-time-thu').hide(); $(".tr-thursday").css({backgroundColor: "#EEEEEE"});
+                }
+            });
+
+            $('.activate-chat-checkbox-fri').change(function() {
+                if ($('.activate-chat-checkbox-fri').prop('checked') == true) {
+                    $('.start-time-fri').val('09:00').show(); $('.end-time-fri').val('17:00').show(); $('.set-time-fri').show(); $(".tr-friday").css({backgroundColor: "#FFFFFF"});
+                } else {
+                    $('.start-time-fri').val('').hide(); $('.end-time-fri').val('').hide(); $('.set-time-fri').hide(); $(".tr-friday").css({backgroundColor: "#EEEEEE"});
+                }
+            });
+
+            $('.activate-chat-checkbox-sat').change(function() {
+                if ($('.activate-chat-checkbox-sat').prop('checked') == true) {
+                    $('.start-time-sat').val('09:00').show(); $('.end-time-sat').val('17:00').show(); $('.set-time-sat').show(); $(".tr-saturday").css({backgroundColor: "#FFFFFF"});
+                } else {
+                    $('.start-time-sat').val('').hide(); $('.end-time-sat').val('').hide(); $('.set-time-sat').hide(); $(".tr-saturday").css({backgroundColor: "#EEEEEE"});
+                }
+            });
+        </script>
+                            <!-- ================================================== TEMPORARY FOR EXAMPLES ======================================================= -->
+        <script>
+            $('#showAvailabilityBtn2').click(function() {
+                if ($('#myIcon2').hasClass('fa-chevron-right')) {
+                    $('#myIcon2').removeClass('fa-chevron-right');
+                    $('#myIcon2').addClass('fa-chevron-down');
+                } else {
+                    $('#myIcon2').removeClass('fa-chevron-down');
+                    $('#myIcon2').addClass('fa-chevron-right');
+                }
+            });
+
+            $(document).ready(function() {
+                if ($('.activate-chat-checkbox-sun2').prop('checked') == false) {
+                    $('.start-time-sun2').val('').prop('disabled', true);
+                    $('.end-time-sun2').val('').prop('disabled', true);
+                    $('.start-sun').val('').prop('disabled', true);
+                    $('.end-sun').val('').prop('disabled', true);
+                }
+
+                if($('.activate-chat-checkbox-mon2').prop('checked') == false) {
+                    $('.start-time-mon2').val('').prop('disabled', true);
+                    $('.end-time-mon2').val('').prop('disabled', true);
+                    $('.start-mon').val('').prop('disabled', true);
+                    $('.end-mon').val('').prop('disabled', true);
+                }
+
+                if($('.activate-chat-checkbox-tue2').prop('checked') == false) {
+                    $('.start-time-tue2').val('').prop('disabled', true);
+                    $('.end-time-tue2').val('').prop('disabled', true);
+                    $('.start-tue').val('').prop('disabled', true);
+                    $('.end-tue').val('').prop('disabled', true);
+                }
+
+                if($('.activate-chat-checkbox-wed2').prop('checked') == false) {
+                    $('.start-time-wed2').val('').prop('disabled', true);
+                    $('.end-time-wed2').val('').prop('disabled', true);
+                    $('.start-wed').val('').prop('disabled', true);
+                    $('.end-wed').val('').prop('disabled', true);
+                }
+
+                if($('.activate-chat-checkbox-thu2').prop('checked') == false) {
+                    $('.start-time-thu2').val('').prop('disabled', true);
+                    $('.end-time-thu2').val('').prop('disabled', true);
+                    $('.start-thu').val('').prop('disabled', true);
+                    $('.end-thu').val('').prop('disabled', true);
+                }
+
+                if($('.activate-chat-checkbox-fri2').prop('checked') == false) {
+                    $('.start-time-fri2').val('').prop('disabled', true);
+                    $('.end-time-fri2').val('').prop('disabled', true);
+                    $('.start-fri').val('').prop('disabled', true);
+                    $('.end-fri').val('').prop('disabled', true);
+                }
+
+                if($('.activate-chat-checkbox-sat2').prop('checked') == false) {
+                    $('.start-time-sat2').val('').prop('disabled', true);
+                    $('.end-time-sat2').val('').prop('disabled', true);
+                    $('.start-sat').val('').prop('disabled', true);
+                    $('.end-sat').val('').prop('disabled', true);
+                }
+            });
+
+            $('.activate-chat-checkbox-sun2').change(function(){
+                if ($('.activate-chat-checkbox-sun2').prop('checked') == true) {
+                    $('.start-time-sun2').val('09:00').prop('disabled', false);
+                    $('.end-time-sun2').val('05:00').prop('disabled', false);
+                    $('.start-sun').val('AM').prop('disabled', false);
+                    $('.end-sun').val('PM').prop('disabled', false);
+                } else {
+                    $('.start-time-sun2').val('').prop('disabled', true);
+                    $('.end-time-sun2').val('').prop('disabled', true);
+                    $('.start-sun').val('').prop('disabled', true);
+                    $('.end-sun').val('').prop('disabled', true);
+                }
+            });
+
+            $('.activate-chat-checkbox-mon2').change(function(){
+                if ($('.activate-chat-checkbox-mon2').prop('checked') == true) {
+                    $('.start-time-mon2').val('09:00').prop('disabled', false);
+                    $('.end-time-mon2').val('05:00').prop('disabled', false);
+                    $('.start-mon').val('AM').prop('disabled', false);
+                    $('.end-mon').val('PM').prop('disabled', false);
+                } else {
+                    $('.start-time-mon2').val('').prop('disabled', true);
+                    $('.end-time-mon2').val('').prop('disabled', true);
+                    $('.start-mon').val('').prop('disabled', true);
+                    $('.end-mon').val('').prop('disabled', true);
+                }
+            });
+
+            $('.activate-chat-checkbox-tue2').change(function(){
+                if ($('.activate-chat-checkbox-tue2').prop('checked') == true) {
+                    $('.start-time-tue2').val('09:00').prop('disabled', false);
+                    $('.end-time-tue2').val('05:00').prop('disabled', false);
+                    $('.start-tue').val('AM').prop('disabled', false);
+                    $('.end-tue').val('PM').prop('disabled', false);
+                } else {
+                    $('.start-time-tue2').val('').prop('disabled', true);
+                    $('.end-time-tue2').val('').prop('disabled', true);
+                    $('.start-tue').val('').prop('disabled', true);
+                    $('.end-tue').val('').prop('disabled', true);
+                }
+            });
+
+            $('.activate-chat-checkbox-wed2').change(function(){
+                if ($('.activate-chat-checkbox-wed2').prop('checked') == true) {
+                    $('.start-time-wed2').val('09:00').prop('disabled', false);
+                    $('.end-time-wed2').val('05:00').prop('disabled', false);
+                    $('.start-wed').val('AM').prop('disabled', false);
+                    $('.end-wed').val('PM').prop('disabled', false);
+                } else {
+                    $('.start-time-wed2').val('').prop('disabled', true);
+                    $('.end-time-wed2').val('').prop('disabled', true);
+                    $('.start-wed').val('').prop('disabled', true);
+                    $('.end-wed').val('').prop('disabled', true);
+                }
+            });
+
+            $('.activate-chat-checkbox-thu2').change(function(){
+                if ($('.activate-chat-checkbox-thu2').prop('checked') == true) {
+                    $('.start-time-thu2').val('09:00').prop('disabled', false);
+                    $('.end-time-thu2').val('05:00').prop('disabled', false);
+                    $('.start-thu').val('AM').prop('disabled', false);
+                    $('.end-thu').val('PM').prop('disabled', false);
+                } else {
+                    $('.start-time-thu2').val('').prop('disabled', true);
+                    $('.end-time-thu2').val('').prop('disabled', true);
+                    $('.start-thu').val('').prop('disabled', true);
+                    $('.end-thu').val('').prop('disabled', true);
+                }
+            });
+
+            $('.activate-chat-checkbox-fri2').change(function(){
+                if ($('.activate-chat-checkbox-fri2').prop('checked') == true) {
+                    $('.start-time-fri2').val('09:00').prop('disabled', false);
+                    $('.end-time-fri2').val('05:00').prop('disabled', false);
+                    $('.start-fri').val('AM').prop('disabled', false);
+                    $('.end-fri').val('PM').prop('disabled', false);
+                } else {
+                    $('.start-time-fri2').val('').prop('disabled', true);
+                    $('.end-time-fri2').val('').prop('disabled', true);
+                    $('.start-fri').val('').prop('disabled', true);
+                    $('.end-fri').val('').prop('disabled', true);
+                }
+            });
+
+            $('.activate-chat-checkbox-sat2').change(function(){
+                if ($('.activate-chat-checkbox-sat2').prop('checked') == true) {
+                    $('.start-time-sat2').val('09:00').prop('disabled', false);
+                    $('.end-time-sat2').val('05:00').prop('disabled', false);
+                    $('.start-sat').val('AM').prop('disabled', false);
+                    $('.end-sat').val('PM').prop('disabled', false);
+                } else {
+                    $('.start-time-sat2').val('').prop('disabled', true);
+                    $('.end-time-sat2').val('').prop('disabled', true);
+                    $('.start-sat').val('').prop('disabled', true);
+                    $('.end-sat').val('').prop('disabled', true);
+                }
+            });
+        </script>
+<!-- ============================================================================================================================= -->
+    </body>
+</html>
