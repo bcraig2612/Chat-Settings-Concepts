@@ -180,7 +180,7 @@ table.table>thead>tr>th {
   }
 }
 
-@media (pointer:coarse) {
+@media (hover:none) {
   a.set-time-sun,
   a.set-time-mon,
   a.set-time-tue,
@@ -188,7 +188,7 @@ table.table>thead>tr>th {
   a.set-time-thu,
   a.set-time-fri,
   a.set-time-sat {
-    display: none !important;
+    display: none;
   }
 }
 
