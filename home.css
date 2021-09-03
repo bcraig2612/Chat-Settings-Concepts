@@ -165,7 +165,7 @@ table.table>thead>tr>th {
   font-size: 12.5px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 435px) {
   span.short-text {
     display: inline-block;
   }
@@ -177,6 +177,18 @@ table.table>thead>tr>th {
   form>fieldset>section>table.table>tbody>tr>td,
   form>fieldset>section>table.table>thead>tr>th {
     padding: 5px 5px;
+  }
+}
+
+@media (pointer:coarse) {
+  a.set-time-sun,
+  a.set-time-mon,
+  a.set-time-tue,
+  a.set-time-wed,
+  a.set-time-thu,
+  a.set-time-fri,
+  a.set-time-sat {
+    display: none !important;
   }
 }
 
@@ -205,8 +217,8 @@ table.table>thead>tr>th {
 }
 /* TEMPORARY */
 .table>tbody>tr>td>.flex-cell>.hours-select2 {
-  min-width: 50px;
-  max-width: 78px;
+  min-width: 47px;
+  max-width: fit-content;
   height: 30px;
   padding-left: 4px;
   border-color: #DDDDDD;
