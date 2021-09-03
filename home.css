@@ -128,17 +128,22 @@
     background: none;
 }
 
+a.input-button:focus,
+a.input-button:hover,
+button#showAvailabilityBtn:hover {
+  background-color: #23547E;
+  color: #FFFFFF;
+}
+
 a.input-button {
-    text-decoration: none;
-    border: 1px solid #DDDDDD;
+    border: 1px solid #2c699d;
     display: inline-block;
-    padding: 8.5px 12px;
-    border-left: 0;
+    padding: 6px;
     cursor: pointer;
-    align-self: center;
-    justify-content: center;
-    line-height: 1;
-    background-color: #F6F6F6;
+    height: 32px;
+    width: 32px;
+    background-color: #3276B1;
+    color: #FFFFFF;
 }
 
 table.availability-table {
@@ -205,8 +210,8 @@ table.table>thead>tr>th {
 }
 /* TEMPORARY */
 .table>tbody>tr>td>.flex-cell>.hours-select2 {
-  min-width: 47px;
-  max-width: fit-content;
+  min-width: 54px;
+  max-width: 80px;
   height: 30px;
   padding-left: 4px;
   border-color: #DDDDDD;
