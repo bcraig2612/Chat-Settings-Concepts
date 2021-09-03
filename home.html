@@ -612,9 +612,9 @@
                 }
             });
 
-            $(".custom-start-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "H:i", defaultDate: "09:00", wrap: true, disableMobile: "true" });
+            $(".custom-start-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "H:i", defaultDate: "09:00", wrap: true });
 
-            $(".custom-end-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "H:i", defaultDate: "17:00", wrap: true, disableMobile: "true" });
+            $(".custom-end-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "H:i", defaultDate: "17:00", wrap: true });
 
             $(document).ready(function() {
                 if ($('.activate-chat-checkbox-sun').prop('checked') == false) { $('.start-time-sun').val('').hide(); $('.end-time-sun').val('').hide(); $('.set-time-sun').hide(); $(".tr-sunday").css({backgroundColor: "#EEEEEE"}); }
