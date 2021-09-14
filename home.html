@@ -1,43 +1,402 @@
+
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <title>Manage Settings</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/bootstrap.min.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-production-plugins.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-production.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-skins.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/stu_dashboard.css?v=2373">
-        <link rel="shortcut icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/favicon/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/favicon/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
-        <link rel="apple-touch-icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/sptouch-icon-iphone.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-ipad.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-iphone-retina.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-ipad-retina.png">
-        <link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
-        <link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
-        <link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
-        <link rel="stylesheet" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/css/bootstrap-social-2763.css">
-        <link rel="stylesheet" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/css/intlTelInput-2373.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-        <link rel="stylesheet" href="./home.css">
-    </head>
-    <body class="smart-style-0">
-        <div id="content">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h1><i class="fa fa-comment fa-fw" aria-hidden="true"></i> Chat Customizations</h1>
-                        </div>
-                        <form name="chat_form" id="chat_form" method="post" action="/my-settings/chat/" class="smart-form" style="background-color: #f9f9f9;">
+	<head>
+		<meta charset="utf-8">
+		<title>Manage Settings</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/bootstrap.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-production-plugins.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-production.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-skins.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/stu_dashboard.css?v=2373">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/favicon/favicon.ico" type="image/x-icon">
+
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+		<!-- Specifying a Webpage Icon for Web Clip -->
+		<link rel="apple-touch-icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/sptouch-icon-iphone.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-ipad.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-iphone-retina.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-ipad-retina.png">
+
+		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Startup image for web apps -->
+		<link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+		<link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+		<link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-70872910-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+
+		<style type="text/css">
+			.smart-form fieldset {
+				background: rgba(248,248,248,.9);
+			}
+		</style>
+
+
+    <link rel="stylesheet" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/css/bootstrap-social-2763.css">
+    <link rel="stylesheet" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/css/intlTelInput-2373.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	<style type="text/css">
+	.intl-tel-input {display: table-cell;}
+	.intl-tel-input .iti-flag .arrow {border: none;}
+	.intl-tel-input {width: 100%;}
+	.stars, .stars a {
+	  white-space: nowrap;
+	  color: #f3a928;
+	}
+	@media (max-width: 300px) {
+	  .navbar-header {
+		  float: none;
+	  }
+	  .navbar-left,.navbar-right {
+		  float: none !important;
+	  }
+	  .navbar-toggle {
+		  display: block;
+	  }
+	  .navbar-collapse {
+		  border-top: 1px solid transparent;
+		  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	  }
+	  .navbar-fixed-top {
+		  top: 0;
+		  border-width: 0 0 1px;
+	  }
+	  .navbar-collapse.collapse {
+		  display: none!important;
+	  }
+	  .navbar-nav {
+		  float: none!important;
+		  margin-top: 7.5px;
+	  }
+	  .navbar-nav>li {
+		  float: none;
+	  }
+	  .navbar-nav>li>a {
+		  padding-top: 10px;
+		  padding-bottom: 10px;
+	  }
+	  .collapse.in{
+		  display:block !important;
+	  }
+	}
+      .controls {
+        background-color: #fff;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        height: 29px;
+        margin-left: 17px;
+        margin-top: 10px;
+        outline: none;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+      #map {
+        height: 300px;
+      }
+      .controls:focus {
+        border-color: #4d90fe;
+      }
+      .title {
+        font-weight: bold;
+      }
+      #infowindow-content {
+        display: none;
+      }
+      #map #infowindow-content {
+        display: inline;
+      }
+      .flatpickr-time input.flatpickr-hour {
+  font-weight: normal;
+}
+
+.flatpickr-input[readonly] {
+  background-color: #FFFFFF;
+}
+
+.flatpickr-input[disabled] {
+  background-color: #EEEEEE;
+}
+
+::selection {
+    color: none;
+    background: none;
+}
+
+::-moz-selection {
+    color: none;
+    background: none;
+}
+
+a.input-button:focus,
+a.input-button:hover,
+button#showAvailabilityBtn:hover {
+  background-color: #23547E;
+  color: #FFFFFF;
+}
+
+a.input-button {
+    border: 1px solid #2c699d;
+    display: inline-block;
+    padding: 6px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    background-color: #3276B1;
+    color: #FFFFFF;
+}
+
+table.availability-table {
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+}
+
+span.short-text {
+  display: none;
+}
+
+form>fieldset>section>button#showAvailabilityBtn,
+form>fieldset>section>button#showAvailabilityBtn2 {
+  background-color: #3276B1;
+  color: #FFFFFF;
+}
+
+form>fieldset>section>table.table>tbody>tr>td,
+form>fieldset>section>table.table>thead>tr>th {
+  padding: 7px 9px;
+}
+
+table.table>thead>tr>th {
+  font-size: 12.5px;
+}
+
+@media (max-width: 435px) {
+  span.short-text {
+    display: inline-block;
+  }
+
+  span.full-text {
+    display: none;
+  }
+
+  form>fieldset>section>table.table>tbody>tr>td,
+  form>fieldset>section>table.table>thead>tr>th {
+    padding: 5px 5px;
+  }
+}
+
+.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-sun,
+.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-mon,
+.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-tue,
+.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-wed,
+.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-thu,
+.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-fri,
+.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-sat {
+  margin-top: 3px;
+}
+
+.table>tbody>tr>td.weekday {
+  vertical-align: middle;
+}
+
+.flex-cell {
+  display: flex;
+}
+
+.table>tbody>tr>td>.flex-cell>.hours-select {
+  min-width: 55px;
+  max-width: 90px;
+  margin-right: 3px;
+}
+/* TEMPORARY */
+.table>tbody>tr>td>.flex-cell>.hours-select2 {
+  min-width: 54px;
+  max-width: 80px;
+  height: 30px;
+  padding-left: 4px;
+  border-color: #DDDDDD;
+}
+/* TEMPORARY */
+
+.table>tbody>tr>td>.flex-cell>.day-or-night {
+  min-width: 41px;
+  max-width: 43px;
+}
+	</style>
+
+
+	</head>
+	<body class="smart-style-0">
+
+
+		<!-- HEADER -->
+		<header id="header">
+			<div id="logo-group"><span id="logo"><img src="/img/logo-dark.png" alt="SoTellUs"></span></div>
+
+			<!-- pulled right: nav area -->
+			<div class="pull-right">
+
+				<!-- collapse menu button -->
+				<div id="hide-menu" class="btn-header pull-right">
+					<span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder" aria-hidden="true"></i></a> </span>
+				</div>
+				<!-- end collapse menu -->
+
+				<!-- #MOBILE -->
+				<!-- Top menu profile link : this shows only when top menu is active -->
+				<ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+					<li class="">
+						<a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown">
+							<img src="/img/avatars/default.png" alt="demo" class="online" />
+						</a>
+						<ul class="dropdown-menu pull-right">
+							<li><a href="javascript:void(0);"  class="padding-10 padding-top-0 padding-bottom-0"><i class="fa fa-cog" aria-hidden="true"></i> Setting</a></li>
+							<li class="divider"></li>
+							<li><a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="toggleShortcut" rel="nofollow"><i class="fa fa-arrow-down" aria-hidden="true"></i> <u>S</u>hortcut</a></li>
+							<li class="divider"></li>
+							<li><a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="launchFullscreen" rel="nofollow"><i class="fa fa-arrows-alt" aria-hidden="true"></i> Full <u>S</u>creen</a></li>
+							<li class="divider"></li>
+							<li><a href="/my-account/logout/" class="padding-10 padding-top-5 padding-bottom-5" data-action="userLogout" rel="nofollow"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> <strong><u>L</u>ogout</strong></a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<!-- logout button -->
+				<div id="logout" class="btn-header transparent pull-right">
+					<span> <a href="/my-account/logout/" title="Sign Out" data-action="userLogout" data-logout-msg="You can improve your security further after logging out by closing this opened browser" rel="nofollow"><i class="fa fa-sign-out" aria-hidden="true"></i></a> </span>
+				</div>
+				<!-- end logout button -->
+
+				<!-- fullscreen button -->
+				<div id="fullscreen" class="btn-header transparent pull-right">
+					<span> <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen" rel="nofollow"><i class="fa fa-arrows-alt" aria-hidden="true"></i></a> </span>
+				</div>
+				<!-- end fullscreen button -->
+
+			</div>
+			<!-- end pulled right: nav area -->
+
+		</header>
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<aside id="left-panel">
+
+			<!-- User info -->
+			<div class="login-info">
+				<span> <!-- User image size is adjusted inside CSS, it should stay as it -->
+
+					<a href="/my-account/">
+						<img src="/img/avatars/default.png" alt="me" class="online" />
+						<span>demo</span>
+					</a>
+
+				</span>
+			</div>
+			<!-- end user info -->
+
+			<!-- NAVIGATION : This navigation is also responsive-->
+			<nav>
+
+				<ul>
+										<li><a href="/my-profile/" title="My Company Profile"><i class="fa fa-lg fa-fw fa-building-o" aria-hidden="true"></i> <span class="menu-item-parent">Getting Started</span></a></li>					<li><a href="/reviews/demo-company/" title="Public Profile" target="_blank"><i class="fa fa-lg fa-fw fa-globe" aria-hidden="true"></i> <span class="menu-item-parent">Public Profile</span></a></li>					<li><a href="/API/chat/authRedirect/" target="_blank" title="Live Chat"><i class="fa fa-lg fa-fw fa-comment" aria-hidden="true"></i> <span class="menu-item-parent" style="display: inline-flex; align-items: center;">Live Chat <span style="background: #3276b1; margin-left: 10px;" class="badge badge-primary">Beta</span></span></a></li>					<li><a href="/API/chat/authRedirect/local/" target="_blank" title="Live Chat"><i class="fa fa-lg fa-fw fa-comment" aria-hidden="true"></i> <span class="menu-item-parent" style="display: inline-flex; align-items: center;">Live Chat <span style="background: #3276b1; margin-left: 10px;" class="badge badge-primary">LOCAL Beta</span></span></a></li>					<li><a href="/my-reviews/"><i class="fa fa-lg fa-fw fa-comments-o"></i> <span class="menu-item-parent">My Reviews</span></a></li>					<li><a href="/my-reviews/send-invite/"><i class="fa fa-lg fa-fw fa-mobile"></i> <span class="menu-item-parent">Invitations</span></a></li>					<li><a href="/my-reviews/embed/"><i class="fa fa-lg fa-fw fa-code"></i> <span class="menu-item-parent">Embed on My Site</span></a></li>															<li><a href="/my-customer-referrals/" title="my-customer-referrals"><i class="fa fa-lg fa-fw fa-heart-o" aria-hidden="true"></i> <span class="menu-item-parent">Referral Program</span></a></li>					<li class="active"><a href="/my-settings/" title="my-settings"><i class="fa fa-lg fa-fw fa-gears" aria-hidden="true"></i> <span class="menu-item-parent">Settings</span></a></li>
+					<li><a href="http://support.sotellus.com/support/home" target="_blank"><i class="fa fa-lg fa-fw fa-life-ring"></i> <span class="menu-item-parent">Support</span></a></li>
+				</ul>
+
+			</nav>
+
+		</aside>
+		<!-- END NAVIGATION -->
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+			<!-- RIBBON -->
+			<div id="ribbon">
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li><a href="/"><i class="fa fa-home"></i></a></li><li><a href="/my-settings/">Settings</a></li><li class="active">Chat Settings</li>				</ol>
+				<!-- end breadcrumb -->
+			</div>
+			<!-- END RIBBON -->
+	<div class="navbar navbar-default" style="margin-bottom: 0;">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><i class="fa fa-cog fa-spin" aria-hidden="true"></i></a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+			<ul class="nav navbar-nav">
+			  	<li><a href="/my-settings/messages/"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i> Invites</a></li>
+				<li><a href="/my-settings/users/"><i class="fa fa-users fa-fw" aria-hidden="true"></i> Users</a></li>
+				<li><a href="/my-settings/reputation/"><i class="fa fa-tachometer fa-fw" aria-hidden="true"></i> Reputation</a></li>				<li><a href="/my-settings/written/"><i class="fa fa-comment-o fa-fw" aria-hidden="true"></i> Written Reviews</a></li>				<li><a href="/my-settings/thank-you-page/"><i class="fa fa-heart fa-fw" aria-hidden="true"></i> Thank You Page</a></li>				<li><a href="/my-settings/seo/"><i class="fa fa-search fa-fw" aria-hidden="true"></i> Search Engines</a></li>
+				<li><a href="/my-settings/widget/"><i class="fa fa-gears fa-fw" aria-hidden="true"></i> Widget</a></li>				<li><a href="/my-settings/sm/"><i class="fa fa-share-alt fa-fw" aria-hidden="true"></i> 3rd-Party</a></li>												  <li class="active"><a href="/my-settings/chat/"><i class="fa fa-comment fa-fw" aria-hidden="true"></i> Chat</a></li>
+				<li><a href="/my-settings/billing/"><i class="fa fa-credit-card fa-fw" aria-hidden="true"></i> Billing</a></li>			  			</ul>
+		</div>
+	</div>
+<!-- MAIN CONTENT -->
+<div id="content">
+		<div class="row">
+		<div class="col-xs-12 col-sm-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h1><i class="fa fa-comment fa-fw" aria-hidden="true"></i> Chat Customizations</h1>
+				</div>
+				<form name="chat_form" id="chat_form" method="post" action="/my-settings/chat/" class="smart-form" style="background-color: #f9f9f9;">
+						<input type="hidden" name="clientid" value="" />
+						<input type="hidden" name="action" value="chat" />
+						<input type="hidden" name="token" value="df4e0b968d16baf27dd970d3be4e81d6" />
+						<input type="hidden" name="showadvanced" id="showadvancedinput" value="0" />
+						<fieldset style="background-color: #f9f9f9;">
+							<legend>Customer Service Agent</legend>
+							<section>
+								<label class="label" for="display_name">Display Name <span style="font-size: 66%;">(Default: Customer Service)</span></label>
+								<label class="input"><input type="text" maxLength="16" name="settings[display_name]" id="display_name" value="Customer Service"></label>
+							</section>
+						</fieldset>
+						<fieldset style="background-color: #f9f9f9;">
+							<legend>Reduce Spam</legend>
+							<section>
+								<label class="toggle">
+								  	<input type="checkbox" name="settings[chat][require_contact_info_to_start]" value="1">
+									<i data-swchon-text="ON" data-swchoff-text="OFF"></i>Require the Visitor's contact information to initiate the chat.</label>
+									<div class="note" style="margin-bottom: 15px;">Enabling this setting will help prevent some spam, but also may discourage real people from asking questions who may be apprehensive about providing their contact information.</div>
+								</label>
+							</section>
+						</fieldset>
                             <fieldset style="background-color: #f9f9f9;">
                                 <legend>Customer Service Availability</legend>
                                 <section>
@@ -194,415 +553,141 @@
                                     </div>
                                 </section>
                             </fieldset>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h1><i class="fa fa-comment fa-fw" aria-hidden="true"></i> Chat Customizations</h1>
-                        </div>
-                        <form name="chat_form" id="chat_form" method="post" action="/my-settings/chat/" class="smart-form" style="background-color: #f9f9f9;">
-                            <fieldset style="background-color: #f9f9f9;">
-                                <legend>Customer Service Availability</legend>
-                                <section>
-                                    <button type="button" id="showAvailabilityBtn2" class="btn btn-sm" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-                                        Update Availability&nbsp;&nbsp;<i id="myIcon2" class="fa fa-chevron-right" style="font-size: 10px;" aria-hidden="true"></i>
-                                    </button>
-                                    <div class="collapse" id="collapseExample2">
-                                        <div class="card card-body">
-                                            <table class="table availability-table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Day</th>
-                                                        <th>Start Time</th>
-                                                        <th>End Time</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="weekday">
-                                                            <div class="flex-cell">
-                                                                <input class="activate-chat-checkbox-sun2" type="checkbox" />&nbsp;&nbsp;<span class="full-text">Sunday</span><span class="short-text">Sun</span> </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select start-time-sun2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night start-sun">
-                                                                    <option>AM</option>
-                                                                    <option>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select end-time-sun2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night end-sun">
-                                                                    <option>AM</option>
-                                                                    <option>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="weekday">
-                                                            <div class="flex-cell">
-                                                                <input class="activate-chat-checkbox-mon2" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Monday</span><span class="short-text">Mon</span> </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select start-time-mon2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option selected>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night start-mon">
-                                                                    <option selected>AM</option>
-                                                                    <option>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select end-time-mon2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option selected>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night end-mon">
-                                                                    <option>AM</option>
-                                                                    <option selected>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="weekday">
-                                                            <div class="flex-cell">
-                                                                <input class="activate-chat-checkbox-tue2" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Tuesday</span><span class="short-text">Tue</span> </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select start-time-tue2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option selected>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night start-tue">
-                                                                    <option selected>AM</option>
-                                                                    <option>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select end-time-tue2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option selected>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night end-tue">
-                                                                    <option>AM</option>
-                                                                    <option selected>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="weekday">
-                                                            <div class="flex-cell">
-                                                                <input class="activate-chat-checkbox-wed2" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Wednesday</span><span class="short-text">Wed</span> </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select start-time-wed2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option selected>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night start-wed">
-                                                                    <option selected>AM</option>
-                                                                    <option>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select end-time-wed2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option selected>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night end-wed">
-                                                                    <option>AM</option>
-                                                                    <option selected>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="weekday">
-                                                            <div class="flex-cell">
-                                                                <input class="activate-chat-checkbox-thu2" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Thursday</span><span class="short-text">Thu</span> </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select start-time-thu2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option selected>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night start-thu">
-                                                                    <option selected>AM</option>
-                                                                    <option>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select end-time-thu2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option selected>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night end-thu">
-                                                                    <option>AM</option>
-                                                                    <option selected>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="weekday">
-                                                            <div class="flex-cell">
-                                                                <input class="activate-chat-checkbox-fri2" type="checkbox" checked />&nbsp;&nbsp;<span class="full-text">Friday</span><span class="short-text">Fri</span> </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select start-time-fri2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option selected>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night start-fri">
-                                                                    <option selected>AM</option>
-                                                                    <option>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select end-time-fri2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option selected>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night end-fri">
-                                                                    <option>AM</option>
-                                                                    <option selected>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="weekday">
-                                                            <div class="flex-cell">
-                                                                <input class="activate-chat-checkbox-sat2" type="checkbox" />&nbsp;&nbsp;<span class="full-text">Saturday</span><span class="short-text">Sat</span> </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select start-time-sat2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night start-sat">
-                                                                    <option>AM</option>
-                                                                    <option>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="flex-cell">
-                                                                <select class="form-control hours-select end-time-sat2">
-                                                                    <option>12:00</option>
-                                                                    <option>01:00</option>
-                                                                    <option>02:00</option>
-                                                                    <option>03:00</option>
-                                                                    <option>04:00</option>
-                                                                    <option>05:00</option>
-                                                                    <option>06:00</option>
-                                                                    <option>07:00</option>
-                                                                    <option>08:00</option>
-                                                                    <option>09:00</option>
-                                                                    <option>10:00</option>
-                                                                    <option>11:00</option>
-                                                                </select>
-                                                                <select class="form-control day-or-night end-sat">
-                                                                    <option>AM</option>
-                                                                    <option>PM</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </section>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script data-pace-options='{ "restartOnRequestAfter": true }' src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/pace/pace.min.js?v=2373"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/app.config.js"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js?v=2373"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/bootstrap/bootstrap.min.js"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/notification/SmartNotification.min.js"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/smartwidgets/jarvis.widget.min.js"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js?v=2373"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/sparkline/jquery.sparkline.min.js?v=2373"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/jquery-validate/jquery.validate.min.js?v=2373"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/masked-input/jquery.maskedinput.min.js?v=2373"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/select2/select2.min.js?v=2373"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/bootstrap-slider/bootstrap-slider.min.js?v=2373"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/msie-fix/jquery.mb.browser.min.js?v=2373"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/fastclick/fastclick.min.js?v=2373"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/app.min.js"></script>
-        <script src="/js/plugin/colorpicker/bootstrap-colorpicker.min.js"></script>
-        <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/js/intlTelInput-2373.min.js"></script>
+						<fieldset style="background-color: #f9f9f9;">
+							<legend>Where should chat notifications get sent?</legend>
+							<section>
+								<label class="label" for="chat_sms_phone_number">Phone number</label>
+								<label class="input"><input type="text" name="settings[chat_sms_phone_number]" id="chat_sms_phone_number" value=""></label>
+															</section>
+							<section>
+								<label class="label" for="chat_email_address">Email address</label>
+								<label class="input"><input type="text" name="settings[chat_email_address]" id="chat_email_address" value="brandon@ontoplocal.com"></label>
+							</section>
+						</fieldset>
+						<fieldset style="background-color: #f9f9f9;">
+							<legend>Colors</legend>
+							<section>
+								<label class="label" for="color_chat">Theme Color <span style="font-size: 66%;">(Default: #009688)</span></label>
+								<label class="input"><input type="text" class="colorpicker" name="settings[color_chat]" id="color_chat" value="#337ab7"></label>
+							</section>
+						</fieldset>
+						<footer>
+							<a href="/my-settings/chat/reset/" class="btn btn-default"><i class="fa fa-floppy-o"></i> Reset to Default</a>
+							<button type="submit" class="btn btn-primary" data-loading-text="Loading..."><i class="fa fa-floppy-o"></i> Save</button>
+						</footer>
+					</form>
+				</div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h1>Put your chat widget on your website</h1>
+				</div>
+								<div class="panel-body">
+					<p>Copy and paste the code below right above the closing body tag.</p>
+					<code>
+						&lt;!-- Start of SoTellUs Chat code --&gt;<br />
+						&lt;script type=&quot;text/javascript&quot;&gt;<br />
+						window.__be = window.__be || {};<br />
+						window.__be.id = &quot;demo-company&quot;;<br />
+						window.__be.devMode = true;<br />
+						(function() {
+						var be = document.createElement(&#39;script&#39;); be.type = &#39;text/javascript&#39;; be.async = true;
+						be.src = &#39;https://sotellus.com/js/chat-widget.min.js&#39;;
+						var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(be, s);
+						})();<br />
+						&lt;/script&gt;<br />
+						&lt;!-- End of SoTellUs Chat code --&gt;
+					</code>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN PANEL -->
+		<!-- PAGE FOOTER -->
+		<div class="page-footer">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+				  <span class="txt-color-white">SoTellUs © 2021</span>
+				</div>
+				<div class="col-xs-6 text-right">
+					<span class="txt-color-white">OTL-ORD-01 beta &gt; Gen in: 0.03 sec</span> 					<span class="txt-color-white">Current Time: Tue, 14 Sep 2021 15:08:38 -0700</span>
+				</div>
+			</div>
+		</div>
+		<!-- END PAGE FOOTER -->
+		<!--================================================== -->
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/pace/pace.min.js?v=2373"></script>
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+		<!-- IMPORTANT: APP CONFIG -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/app.config.js"></script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js?v=2373"></script>
+
+		<!-- BOOTSTRAP JS -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/smartwidgets/jarvis.widget.min.js"></script>
+
+		<!-- EASY PIE CHARTS -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js?v=2373"></script>
+
+		<!-- SPARKLINES -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/sparkline/jquery.sparkline.min.js?v=2373"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/jquery-validate/jquery.validate.min.js?v=2373"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/masked-input/jquery.maskedinput.min.js?v=2373"></script>
+
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/select2/select2.min.js?v=2373"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/bootstrap-slider/bootstrap-slider.min.js?v=2373"></script>
+
+		<!-- browser msie issue fix -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/msie-fix/jquery.mb.browser.min.js?v=2373"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/fastclick/fastclick.min.js?v=2373"></script>
+		<!--[if IE 8]>
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+		<![endif]-->
+
+		<!-- MAIN APP JS FILE -->
+		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/app.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+
+				// DO NOT REMOVE : GLOBAL FUNCTIONS!
+				pageSetUp();
+
+				/*
+				 * PAGE RELATED SCRIPTS
+				 */
+
+			});
+
+		</script>
+	<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/js/intlTelInput-2373.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<!-- ============================================================================================================================= -->
         <script>
             var isMobile = false;
             // device detection
@@ -618,357 +703,143 @@
                     $('#myIcon').removeClass('fa-chevron-down'); $('#myIcon').addClass('fa-chevron-right');
                 }
             });
-
             $(".custom-start-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "h:i K", defaultDate: "9:00 AM", wrap: true, disableMobile: "true" });
-
             $(".custom-end-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "h:i K", defaultDate: "5:00 PM", wrap: true, disableMobile: "true" });
-
             $(document).ready(function() {
                 if ($('.activate-chat-checkbox-sun').prop('checked') == false) {
                     $('.start-time-sun').val('').hide();
                     $('.end-time-sun').val('').hide();
                     $('.set-time-sun').hide();
-                    $(".tr-sunday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-sunday").css({ backgroundColor: "#EEEEEE" });
                 }
                 if ($('.activate-chat-checkbox-mon').prop('checked') == false) {
                     $('.start-time-mon').val('').hide();
                     $('.end-time-mon').val('').hide();
                     $('.set-time-mon').hide();
-                    $(".tr-monday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-monday").css({ backgroundColor: "#EEEEEE" });
                 }
                 if ($('.activate-chat-checkbox-tue').prop('checked') == false) {
                     $('.start-time-tue').val('').hide();
                     $('.end-time-tue').val('').hide();
                     $('.set-time-tue').hide();
-                    $(".tr-tuesday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-tuesday").css({ backgroundColor: "#EEEEEE" });
                 }
                 if ($('.activate-chat-checkbox-wed').prop('checked') == false) {
                     $('.start-time-wed').val('').hide();
                     $('.end-time-wed').val('').hide();
                     $('.set-time-wed').hide();
-                    $(".tr-wednesday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-wednesday").css({ backgroundColor: "#EEEEEE" });
                 }
                 if ($('.activate-chat-checkbox-thu').prop('checked') == false) {
                     $('.start-time-thu').val('').hide();
                     $('.end-time-thu').val('').hide();
                     $('.set-time-thu').hide();
-                    $(".tr-thursday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-thursday").css({ backgroundColor: "#EEEEEE" });
                 }
                 if ($('.activate-chat-checkbox-fri').prop('checked') == false) {
                     $('.start-time-fri').val('').hide();
                     $('.end-time-fri').val('').hide();
                     $('.set-time-fri').hide();
-                    $(".tr-friday").css({
-                        backgroundColor: "#FFFFFF"
-                    });
+                    $(".tr-friday").css({ backgroundColor: "#FFFFFF" });
                 }
                 if ($('.activate-chat-checkbox-sat').prop('checked') == false) {
                     $('.start-time-sat').val('').hide();
                     $('.end-time-sat').val('').hide();
                     $('.set-time-sat').hide();
-                    $(".tr-saturday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-saturday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
-
             $('.activate-chat-checkbox-sun').change(function() {
                 if ($('.activate-chat-checkbox-sun').prop('checked') == true) {
                     $('.start-time-sun').val('9:00 AM').show();
                     $('.end-time-sun').val('5:00 PM').show();
-                    $(".tr-sunday").css({
-                        backgroundColor: "#FFFFFF"
-                    });
+                    $(".tr-sunday").css({ backgroundColor: "#FFFFFF" });
                     $('.set-time-sun').show();
                 } else {
                     $('.start-time-sun').val('').hide();
                     $('.end-time-sun').val('').hide();
                     $('.set-time-sun').hide();
-                    $(".tr-sunday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-sunday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
-
             $('.activate-chat-checkbox-mon').change(function() {
                 if ($('.activate-chat-checkbox-mon').prop('checked') == true) {
                     $('.start-time-mon').val('9:00 AM').show();
                     $('.end-time-mon').val('5:00 PM').show();
-                    $(".tr-monday").css({
-                        backgroundColor: "#FFFFFF"
-                    });
+                    $(".tr-monday").css({ backgroundColor: "#FFFFFF" });
                     $('.set-time-mon').show();
                 } else {
                     $('.start-time-mon').val('').hide();
                     $('.end-time-mon').val('').hide();
                     $('.set-time-mon').hide();
-                    $(".tr-monday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-monday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
-
             $('.activate-chat-checkbox-tue').change(function() {
                 if ($('.activate-chat-checkbox-tue').prop('checked') == true) {
                     $('.start-time-tue').val('9:00 AM').show();
                     $('.end-time-tue').val('5:00 PM').show();
-                    $(".tr-tuesday").css({
-                        backgroundColor: "#FFFFFF"
-                    });
+                    $(".tr-tuesday").css({ backgroundColor: "#FFFFFF" });
                     $('.set-time-tue').show();
                 } else {
                     $('.start-time-tue').val('').hide();
                     $('.end-time-tue').val('').hide();
                     $('.set-time-tue').hide();
-                    $(".tr-tuesday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-tuesday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
-
             $('.activate-chat-checkbox-wed').change(function() {
                 if ($('.activate-chat-checkbox-wed').prop('checked') == true) {
                     $('.start-time-wed').val('9:00 AM').show();
                     $('.end-time-wed').val('5:00 PM').show();
-                    $(".tr-wednesday").css({
-                        backgroundColor: "#FFFFFF"
-                    });
+                    $(".tr-wednesday").css({ backgroundColor: "#FFFFFF" });
                     $('.set-time-wed').show();
                 } else {
                     $('.start-time-wed').val('').hide();
                     $('.end-time-wed').val('').hide();
                     $('.set-time-wed').hide();
-                    $(".tr-wednesday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-wednesday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
-
             $('.activate-chat-checkbox-thu').change(function() {
                 if ($('.activate-chat-checkbox-thu').prop('checked') == true) {
                     $('.start-time-thu').val('9:00 AM').show();
                     $('.end-time-thu').val('5:00 PM').show();
-                    $(".tr-thursday").css({
-                        backgroundColor: "#FFFFFF"
-                    });
+                    $(".tr-thursday").css({ backgroundColor: "#FFFFFF" });
                     $('.set-time-thu').show();
                 } else {
                     $('.start-time-thu').val('').hide();
                     $('.end-time-thu').val('').hide();
                     $('.set-time-thu').hide();
-                    $(".tr-thursday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-thursday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
-
             $('.activate-chat-checkbox-fri').change(function() {
                 if ($('.activate-chat-checkbox-fri').prop('checked') == true) {
                     $('.start-time-fri').val('9:00 AM').show();
                     $('.end-time-fri').val('5:00 PM').show();
-                    $(".tr-friday").css({
-                        backgroundColor: "#FFFFFF"
-                    });
+                    $(".tr-friday").css({ backgroundColor: "#FFFFFF" });
                     $('.set-time-fri').show();
                 } else {
                     $('.start-time-fri').val('').hide();
                     $('.end-time-fri').val('').hide();
                     $('.set-time-fri').hide();
-                    $(".tr-friday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-friday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
-
             $('.activate-chat-checkbox-sat').change(function() {
                 if ($('.activate-chat-checkbox-sat').prop('checked') == true) {
                     $('.start-time-sat').val('9:00 AM').show();
                     $('.end-time-sat').val('5:00 PM').show();
-                    $(".tr-saturday").css({
-                        backgroundColor: "#FFFFFF"
-                    });
+                    $(".tr-saturday").css({ backgroundColor: "#FFFFFF" });
                     $('.set-time-sat').show();
                 } else {
                     $('.start-time-sat').val('').hide();
                     $('.end-time-sat').val('').hide();
                     $('.set-time-sat').hide();
-                    $(".tr-saturday").css({
-                        backgroundColor: "#EEEEEE"
-                    });
+                    $(".tr-saturday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
         </script>
-                            <!-- ================================================== TEMPORARY FOR EXAMPLES ======================================================= -->
-        <script>
-            $('#showAvailabilityBtn2').click(function() {
-                if ($('#myIcon2').hasClass('fa-chevron-right')) {
-                    $('#myIcon2').removeClass('fa-chevron-right');
-                    $('#myIcon2').addClass('fa-chevron-down');
-                } else {
-                    $('#myIcon2').removeClass('fa-chevron-down');
-                    $('#myIcon2').addClass('fa-chevron-right');
-                }
-            });
-
-            $(document).ready(function() {
-                if ($('.activate-chat-checkbox-sun2').prop('checked') == false) {
-                    $('.start-time-sun2').val('').prop('disabled', true);
-                    $('.end-time-sun2').val('').prop('disabled', true);
-                    $('.start-sun').val('').prop('disabled', true);
-                    $('.end-sun').val('').prop('disabled', true);
-                }
-
-                if($('.activate-chat-checkbox-mon2').prop('checked') == false) {
-                    $('.start-time-mon2').val('').prop('disabled', true);
-                    $('.end-time-mon2').val('').prop('disabled', true);
-                    $('.start-mon').val('').prop('disabled', true);
-                    $('.end-mon').val('').prop('disabled', true);
-                }
-
-                if($('.activate-chat-checkbox-tue2').prop('checked') == false) {
-                    $('.start-time-tue2').val('').prop('disabled', true);
-                    $('.end-time-tue2').val('').prop('disabled', true);
-                    $('.start-tue').val('').prop('disabled', true);
-                    $('.end-tue').val('').prop('disabled', true);
-                }
-
-                if($('.activate-chat-checkbox-wed2').prop('checked') == false) {
-                    $('.start-time-wed2').val('').prop('disabled', true);
-                    $('.end-time-wed2').val('').prop('disabled', true);
-                    $('.start-wed').val('').prop('disabled', true);
-                    $('.end-wed').val('').prop('disabled', true);
-                }
-
-                if($('.activate-chat-checkbox-thu2').prop('checked') == false) {
-                    $('.start-time-thu2').val('').prop('disabled', true);
-                    $('.end-time-thu2').val('').prop('disabled', true);
-                    $('.start-thu').val('').prop('disabled', true);
-                    $('.end-thu').val('').prop('disabled', true);
-                }
-
-                if($('.activate-chat-checkbox-fri2').prop('checked') == false) {
-                    $('.start-time-fri2').val('').prop('disabled', true);
-                    $('.end-time-fri2').val('').prop('disabled', true);
-                    $('.start-fri').val('').prop('disabled', true);
-                    $('.end-fri').val('').prop('disabled', true);
-                }
-
-                if($('.activate-chat-checkbox-sat2').prop('checked') == false) {
-                    $('.start-time-sat2').val('').prop('disabled', true);
-                    $('.end-time-sat2').val('').prop('disabled', true);
-                    $('.start-sat').val('').prop('disabled', true);
-                    $('.end-sat').val('').prop('disabled', true);
-                }
-            });
-
-            $('.activate-chat-checkbox-sun2').change(function(){
-                if ($('.activate-chat-checkbox-sun2').prop('checked') == true) {
-                    $('.start-time-sun2').val('09:00').prop('disabled', false);
-                    $('.end-time-sun2').val('05:00').prop('disabled', false);
-                    $('.start-sun').val('AM').prop('disabled', false);
-                    $('.end-sun').val('PM').prop('disabled', false);
-                } else {
-                    $('.start-time-sun2').val('').prop('disabled', true);
-                    $('.end-time-sun2').val('').prop('disabled', true);
-                    $('.start-sun').val('').prop('disabled', true);
-                    $('.end-sun').val('').prop('disabled', true);
-                }
-            });
-
-            $('.activate-chat-checkbox-mon2').change(function(){
-                if ($('.activate-chat-checkbox-mon2').prop('checked') == true) {
-                    $('.start-time-mon2').val('09:00').prop('disabled', false);
-                    $('.end-time-mon2').val('05:00').prop('disabled', false);
-                    $('.start-mon').val('AM').prop('disabled', false);
-                    $('.end-mon').val('PM').prop('disabled', false);
-                } else {
-                    $('.start-time-mon2').val('').prop('disabled', true);
-                    $('.end-time-mon2').val('').prop('disabled', true);
-                    $('.start-mon').val('').prop('disabled', true);
-                    $('.end-mon').val('').prop('disabled', true);
-                }
-            });
-
-            $('.activate-chat-checkbox-tue2').change(function(){
-                if ($('.activate-chat-checkbox-tue2').prop('checked') == true) {
-                    $('.start-time-tue2').val('09:00').prop('disabled', false);
-                    $('.end-time-tue2').val('05:00').prop('disabled', false);
-                    $('.start-tue').val('AM').prop('disabled', false);
-                    $('.end-tue').val('PM').prop('disabled', false);
-                } else {
-                    $('.start-time-tue2').val('').prop('disabled', true);
-                    $('.end-time-tue2').val('').prop('disabled', true);
-                    $('.start-tue').val('').prop('disabled', true);
-                    $('.end-tue').val('').prop('disabled', true);
-                }
-            });
-
-            $('.activate-chat-checkbox-wed2').change(function(){
-                if ($('.activate-chat-checkbox-wed2').prop('checked') == true) {
-                    $('.start-time-wed2').val('09:00').prop('disabled', false);
-                    $('.end-time-wed2').val('05:00').prop('disabled', false);
-                    $('.start-wed').val('AM').prop('disabled', false);
-                    $('.end-wed').val('PM').prop('disabled', false);
-                } else {
-                    $('.start-time-wed2').val('').prop('disabled', true);
-                    $('.end-time-wed2').val('').prop('disabled', true);
-                    $('.start-wed').val('').prop('disabled', true);
-                    $('.end-wed').val('').prop('disabled', true);
-                }
-            });
-
-            $('.activate-chat-checkbox-thu2').change(function(){
-                if ($('.activate-chat-checkbox-thu2').prop('checked') == true) {
-                    $('.start-time-thu2').val('09:00').prop('disabled', false);
-                    $('.end-time-thu2').val('05:00').prop('disabled', false);
-                    $('.start-thu').val('AM').prop('disabled', false);
-                    $('.end-thu').val('PM').prop('disabled', false);
-                } else {
-                    $('.start-time-thu2').val('').prop('disabled', true);
-                    $('.end-time-thu2').val('').prop('disabled', true);
-                    $('.start-thu').val('').prop('disabled', true);
-                    $('.end-thu').val('').prop('disabled', true);
-                }
-            });
-
-            $('.activate-chat-checkbox-fri2').change(function(){
-                if ($('.activate-chat-checkbox-fri2').prop('checked') == true) {
-                    $('.start-time-fri2').val('09:00').prop('disabled', false);
-                    $('.end-time-fri2').val('05:00').prop('disabled', false);
-                    $('.start-fri').val('AM').prop('disabled', false);
-                    $('.end-fri').val('PM').prop('disabled', false);
-                } else {
-                    $('.start-time-fri2').val('').prop('disabled', true);
-                    $('.end-time-fri2').val('').prop('disabled', true);
-                    $('.start-fri').val('').prop('disabled', true);
-                    $('.end-fri').val('').prop('disabled', true);
-                }
-            });
-
-            $('.activate-chat-checkbox-sat2').change(function(){
-                if ($('.activate-chat-checkbox-sat2').prop('checked') == true) {
-                    $('.start-time-sat2').val('09:00').prop('disabled', false);
-                    $('.end-time-sat2').val('05:00').prop('disabled', false);
-                    $('.start-sat').val('AM').prop('disabled', false);
-                    $('.end-sat').val('PM').prop('disabled', false);
-                } else {
-                    $('.start-time-sat2').val('').prop('disabled', true);
-                    $('.end-time-sat2').val('').prop('disabled', true);
-                    $('.start-sat').val('').prop('disabled', true);
-                    $('.end-sat').val('').prop('disabled', true);
-                }
-            });
-        </script>
-<!-- ============================================================================================================================= -->
-    </body>
+</body>
 </html>
