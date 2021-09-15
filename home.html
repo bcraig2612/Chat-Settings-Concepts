@@ -1,263 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
-		<meta charset="utf-8">
-		<title>Manage Settings</title>
+        <meta charset="utf-8">
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--* iOS WEB-APP METAS: HIDES SAFARI UI COMPONENTS & CHANGES STATUS BAR APPEARANCE -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-		<!-- Basic Styles -->
+		<title>Manage Settings</title>
+
+        <!--* SMART-ADMIN BOOTSTRAP STYLESHEET -->
 		<link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/bootstrap.min.css">
+        <!--* FONT-AWESOME STYLESHEET -->
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<!--* SMART-ADMIN STYLESHEETS: CAUTION! DO NOT CHANGE THE ORDER -->
 		<link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-production-plugins.min.css">
 		<link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-production.min.css">
 		<link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/smartadmin-skins.min.css">
 		<link rel="stylesheet" type="text/css" media="screen" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/css/stu_dashboard.css?v=2373">
-
-		<!-- FAVICONS -->
+		<!--* FAVICONS IMGS -->
 		<link rel="shortcut icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/favicon/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/favicon/favicon.ico" type="image/x-icon">
-
-		<!-- GOOGLE FONT -->
+		<!--* GOOGLE FONT STYLESHEET -->
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
-
-		<!-- Specifying a Webpage Icon for Web Clip -->
+		<!--* SPECIFYING A WEBPAGE ICON FOR WEB CLIP -->
 		<link rel="apple-touch-icon" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/sptouch-icon-iphone.png">
 		<link rel="apple-touch-icon" sizes="76x76" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-ipad.png">
 		<link rel="apple-touch-icon" sizes="120x120" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-iphone-retina.png">
 		<link rel="apple-touch-icon" sizes="152x152" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/touch-icon-ipad-retina.png">
-
-		<!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-		<!-- Startup image for web apps -->
+		<!--* STARTUP IMG FOR WEB-APPS -->
 		<link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
 		<link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
 		<link rel="apple-touch-startup-image" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
-
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		  ga('create', 'UA-70872910-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
-
-		<style type="text/css">
-			.smart-form fieldset {
-				background: rgba(248,248,248,.9);
-			}
-		</style>
-
-
-    <link rel="stylesheet" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/css/bootstrap-social-2763.css">
-    <link rel="stylesheet" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/css/intlTelInput-2373.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-	<style type="text/css">
-	.intl-tel-input {display: table-cell;}
-	.intl-tel-input .iti-flag .arrow {border: none;}
-	.intl-tel-input {width: 100%;}
-	.stars, .stars a {
-	  white-space: nowrap;
-	  color: #f3a928;
-	}
-	@media (max-width: 300px) {
-	  .navbar-header {
-		  float: none;
-	  }
-	  .navbar-left,.navbar-right {
-		  float: none !important;
-	  }
-	  .navbar-toggle {
-		  display: block;
-	  }
-	  .navbar-collapse {
-		  border-top: 1px solid transparent;
-		  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-	  }
-	  .navbar-fixed-top {
-		  top: 0;
-		  border-width: 0 0 1px;
-	  }
-	  .navbar-collapse.collapse {
-		  display: none!important;
-	  }
-	  .navbar-nav {
-		  float: none!important;
-		  margin-top: 7.5px;
-	  }
-	  .navbar-nav>li {
-		  float: none;
-	  }
-	  .navbar-nav>li>a {
-		  padding-top: 10px;
-		  padding-bottom: 10px;
-	  }
-	  .collapse.in{
-		  display:block !important;
-	  }
-	}
-      .controls {
-        background-color: #fff;
-        border-radius: 2px;
-        border: 1px solid transparent;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        box-sizing: border-box;
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-        height: 29px;
-        margin-left: 17px;
-        margin-top: 10px;
-        outline: none;
-        padding: 0 11px 0 13px;
-        text-overflow: ellipsis;
-        width: 400px;
-      }
-      #map {
-        height: 300px;
-      }
-      .controls:focus {
-        border-color: #4d90fe;
-      }
-      .title {
-        font-weight: bold;
-      }
-      #infowindow-content {
-        display: none;
-      }
-      #map #infowindow-content {
-        display: inline;
-      }
-      .flatpickr-time input.flatpickr-hour {
-  font-weight: normal;
-}
-
-.flatpickr-input[readonly] {
-  background-color: #FFFFFF;
-}
-
-.flatpickr-input[disabled] {
-  background-color: #EEEEEE;
-}
-
-::selection {
-    color: none;
-    background: none;
-}
-
-::-moz-selection {
-    color: none;
-    background: none;
-}
-
-a.input-button:focus,
-a.input-button:hover,
-button#showAvailabilityBtn:hover {
-  background-color: #23547E;
-  color: #FFFFFF;
-}
-
-a.input-button {
-    border: 1px solid #2c699d;
-    display: inline-block;
-    padding: 6px;
-    cursor: pointer;
-    height: 32px;
-    width: 32px;
-    background-color: #3276B1;
-    color: #FFFFFF;
-}
-
-table.availability-table {
-  background-color: #FFFFFF;
-  border: 1px solid #DDDDDD;
-}
-
-span.short-text {
-  display: none;
-}
-
-form>fieldset>section>button#showAvailabilityBtn,
-form>fieldset>section>button#showAvailabilityBtn2 {
-  background-color: #3276B1;
-  color: #FFFFFF;
-}
-
-form>fieldset>section>table.table>tbody>tr>td,
-form>fieldset>section>table.table>thead>tr>th {
-  padding: 7px 9px;
-}
-
-table.table>thead>tr>th {
-  font-size: 12.5px;
-}
-
-@media (max-width: 435px) {
-  span.short-text {
-    display: inline-block;
-  }
-
-  span.full-text {
-    display: none;
-  }
-
-  form>fieldset>section>table.table>tbody>tr>td,
-  form>fieldset>section>table.table>thead>tr>th {
-    padding: 5px 5px;
-  }
-}
-
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-sun,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-mon,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-tue,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-wed,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-thu,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-fri,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-sat {
-  margin-top: 3px;
-}
-
-.table>tbody>tr>td.weekday {
-  vertical-align: middle;
-}
-
-.flex-cell {
-  display: flex;
-}
-
-.table>tbody>tr>td>.flex-cell>.hours-select {
-  min-width: 55px;
-  max-width: 90px;
-  margin-right: 3px;
-}
-/* TEMPORARY */
-.table>tbody>tr>td>.flex-cell>.hours-select2 {
-  min-width: 54px;
-  max-width: 80px;
-  height: 30px;
-  padding-left: 4px;
-  border-color: #DDDDDD;
-}
-/* TEMPORARY */
-
-.table>tbody>tr>td>.flex-cell>.day-or-night {
-  min-width: 41px;
-  max-width: 43px;
-}
-	</style>
-
-
+		<!--* BOOTSTRAP SOCIAL -->
+        <link rel="stylesheet" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/css/bootstrap-social-2763.css">
+		<!--* INTERNATIONAL PHONE # INPUT -->
+        <link rel="stylesheet" href="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/css/intlTelInput-2373.css">
+        <!--* SELECTIZE STYLESHEET -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+        <!--* FLATPICKR STYLESHEET -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+        <!--* CUSTOM CSS STYLESHEET -->
+        <link rel="stylesheet" href="./home.css" />
 	</head>
 	<body class="smart-style-0">
-
-
 		<!-- HEADER -->
 		<header id="header">
 			<div id="logo-group"><span id="logo"><img src="/img/logo-dark.png" alt="SoTellUs"></span></div>
@@ -401,10 +189,438 @@ table.table>thead>tr>th {
                                 <legend>Customer Service Availability</legend>
                                 <section>
                                     <button type="button" id="showAvailabilityBtn" class="btn btn-sm" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                        Update Availability&nbsp;&nbsp;<i id="myIcon" class="fa fa-chevron-right" style="font-size: 10px;" aria-hidden="true"></i>
+                                        Update Schedule&nbsp;&nbsp;<i id="myIcon" class="fa fa-chevron-right" style="font-size: 10px;" aria-hidden="true"></i>
                                     </button>
                                     <div class="collapse" id="collapseExample">
-                                        <div class="card card-body">
+                                        <div class="card">
+                                            <select id="select-timezone" placeholder="Select a default timezone...">
+                                                <option value="">Select a default timezone...</option>
+                                                <option value="Pacific/Niue">(UTC-11:00) Pacific/Niue</option>
+                                                <option value="Pacific/Pago_Pago">(UTC-11:00) Pacific/Pago_Pago</option>
+                                                <option value="Pacific/Midway">(UTC-11:00) Pacific/Midway - Midway Islands</option>
+                                                <option value="Pacific/Tahiti">(UTC-10:00) Pacific/Tahiti - Society Islands </option>
+                                                <option value="Pacific/Rarotonga">(UTC-10:00) Pacific/Rarotonga </option>
+                                                <option value="Pacific/Honolulu">(UTC-10:00) Pacific/Honolulu - Hawaii </option>
+                                                <option value="Pacific/Marquesas">(UTC-09:30) Pacific/Marquesas - Marquesas Islands </option>
+                                                <option value="Pacific/Gambier">(UTC-09:00) Pacific/Gambier - Gambier Islands </option>
+                                                <option value="America/Adak">(UTC-09:00) America/Adak - Aleutian Islands </option>
+                                                <option value="America/Yakutat">(UTC-08:00) America/Yakutat - Alaska - Yakutat </option>
+                                                <option value="America/Juneau">(UTC-08:00) America/Juneau - Alaska - Juneau area </option>
+                                                <option value="America/Nome">(UTC-08:00) America/Nome - Alaska (west) </option>
+                                                <option value="America/Sitka">(UTC-08:00) America/Sitka - Alaska - Sitka area </option>
+                                                <option value="America/Anchorage">(UTC-08:00) America/Anchorage - Alaska (most areas) </option>
+                                                <option value="Pacific/Pitcairn">(UTC-08:00) Pacific/Pitcairn </option>
+                                                <option value="America/Metlakatla">(UTC-08:00) America/Metlakatla - Alaska - Annette Island </option>
+                                                <option value="America/Hermosillo">(UTC-07:00) America/Hermosillo - Mountain Standard Time - Sonora</option>
+                                                <option value="America/Whitehorse">(UTC-07:00) America/Whitehorse - MST - Yukon (east)</option>
+                                                <option value="America/Tijuana">(UTC-07:00) America/Tijuana - Pacific Time US - Baja California</option>
+                                                <option value="America/Los_Angeles">(UTC-07:00) America/Los_Angeles - Pacific</option>
+                                                <option value="America/Dawson_Creek">(UTC-07:00) America/Dawson_Creek - MST - BC (Dawson Cr, Ft St John)</option>
+                                                <option value="America/Creston">(UTC-07:00) America/Creston - MST - BC (Creston)</option>
+                                                <option value="America/Phoenix">(UTC-07:00) America/Phoenix - MST - Arizona (except Navajo)</option>
+                                                <option value="America/Dawson">(UTC-07:00) America/Dawson - MST - Yukon (west)</option>
+                                                <option value="America/Fort_Nelson">(UTC-07:00) America/Fort_Nelson - MST - BC (Ft Nelson)</option>
+                                                <option value="America/Vancouver">(UTC-07:00) America/Vancouver - Pacific - BC (most areas)</option>
+                                                <option value="America/Regina">(UTC-06:00) America/Regina - CST - SK (most areas)</option>
+                                                <option value="America/Mazatlan">(UTC-06:00) America/Mazatlan - Mountain Time - Baja California Sur, Nayarit, Sinaloa</option>
+                                                <option value="America/Edmonton">(UTC-06:00) America/Edmonton - Mountain - AB; BC (E); SK (W)</option>
+                                                <option value="America/Inuvik">(UTC-06:00) America/Inuvik - Mountain - NT (west)</option>
+                                                <option value="America/Belize">(UTC-06:00) America/Belize</option>
+                                                <option value="America/Boise">(UTC-06:00) America/Boise - Mountain - ID (south); OR (east)</option>
+                                                <option value="America/Cambridge_Bay">(UTC-06:00) America/Cambridge_Bay - Mountain - NU (west)</option>
+                                                <option value="America/Guatemala">(UTC-06:00) America/Guatemala</option>
+                                                <option value="America/Costa_Rica">(UTC-06:00) America/Costa_Rica</option>
+                                                <option value="America/Denver">(UTC-06:00) America/Denver - Mountain (most areas)</option>
+                                                <option value="America/El_Salvador">(UTC-06:00) America/El_Salvador</option>
+                                                <option value="America/Chihuahua">(UTC-06:00) America/Chihuahua - Mountain Time - Chihuahua (most areas)</option>
+                                                <option value="America/Managua">(UTC-06:00) America/Managua</option>
+                                                <option value="America/Ojinaga">(UTC-06:00) America/Ojinaga - Mountain Time US - Chihuahua (US border)</option>
+                                                <option value="America/Yellowknife">(UTC-06:00) America/Yellowknife - Mountain - NT (central)</option>
+                                                <option value="Pacific/Galapagos">(UTC-06:00) Pacific/Galapagos - Galapagos Islands</option>
+                                                <option value="America/Tegucigalpa">(UTC-06:00) America/Tegucigalpa</option>
+                                                <option value="America/Swift_Current">(UTC-06:00) America/Swift_Current - CST - SK (midwest)</option>
+                                                <option value="America/Cancun">(UTC-05:00) America/Cancun - Eastern Standard Time - Quintana Roo</option>
+                                                <option value="America/Jamaica">(UTC-05:00) America/Jamaica</option>
+                                                <option value="America/Chicago">(UTC-05:00) America/Chicago - Central (most areas)</option>
+                                                <option value="America/Cayman">(UTC-05:00) America/Cayman</option>
+                                                <option value="America/North_Dakota/New_Salem">(UTC-05:00) America/North_Dakota/New_Salem - Central - ND (Morton rural)</option>
+                                                <option value="America/Merida">(UTC-05:00) America/Merida - Central Time - Campeche, Yucatan</option>
+                                                <option value="America/Indiana/Tell_City">(UTC-05:00) America/Indiana/Tell_City - Central - IN (Perry)</option>
+                                                <option value="America/Panama">(UTC-05:00) America/Panama</option>
+                                                <option value="America/Guayaquil">(UTC-05:00) America/Guayaquil - Ecuador (mainland)</option>
+                                                <option value="America/Atikokan">(UTC-05:00) America/Atikokan - EST - ON (Atikokan); NU (Coral H)</option>
+                                                <option value="America/Indiana/Knox">(UTC-05:00) America/Indiana/Knox - Central - IN (Starke)</option>
+                                                <option value="America/Bahia_Banderas">(UTC-05:00) America/Bahia_Banderas - Central Time - Bahia de Banderas</option>
+                                                <option value="America/North_Dakota/Center">(UTC-05:00) America/North_Dakota/Center - Central - ND (Oliver)</option>
+                                                <option value="America/Winnipeg">(UTC-05:00) America/Winnipeg - Central - ON (west); Manitoba</option>
+                                                <option value="America/Menominee">(UTC-05:00) America/Menominee - Central - MI (Wisconsin border)</option>
+                                                <option value="America/North_Dakota/Beulah">(UTC-05:00) America/North_Dakota/Beulah - Central - ND (Mercer)</option>
+                                                <option value="Pacific/Easter">(UTC-05:00) Pacific/Easter - Easter Island</option>
+                                                <option value="America/Mexico_City">(UTC-05:00) America/Mexico_City - Central Time</option>
+                                                <option value="America/Lima">(UTC-05:00) America/Lima</option>
+                                                <option value="America/Rainy_River">(UTC-05:00) America/Rainy_River - Central - ON (Rainy R, Ft Frances)</option>
+                                                <option value="America/Monterrey">(UTC-05:00) America/Monterrey - Central Time - Durango; Coahuila, Nuevo Leon, Tamaulipas (most areas)</option>
+                                                <option value="America/Matamoros">(UTC-05:00) America/Matamoros - Central Time US - Coahuila, Nuevo Leon, Tamaulipas (US border)</option>
+                                                <option value="America/Rankin_Inlet">(UTC-05:00) America/Rankin_Inlet - Central - NU (central)</option>
+                                                <option value="America/Eirunepe">(UTC-05:00) America/Eirunepe - Amazonas (west)</option>
+                                                <option value="America/Bogota">(UTC-05:00) America/Bogota</option>
+                                                <option value="America/Resolute">(UTC-05:00) America/Resolute - Central - NU (Resolute)</option>
+                                                <option value="America/Rio_Branco">(UTC-05:00) America/Rio_Branco - Acre</option>
+                                                <option value="America/Pangnirtung">(UTC-04:00) America/Pangnirtung - Eastern - NU (Pangnirtung)</option>
+                                                <option value="America/Port_of_Spain">(UTC-04:00) America/Port_of_Spain</option>
+                                                <option value="America/Porto_Velho">(UTC-04:00) America/Porto_Velho - Rondonia</option>
+                                                <option value="America/Port-au-Prince">(UTC-04:00) America/Port-au-Prince</option>
+                                                <option value="America/Guadeloupe">(UTC-04:00) America/Guadeloupe</option>
+                                                <option value="America/Grand_Turk">(UTC-04:00) America/Grand_Turk</option>
+                                                <option value="America/Grenada">(UTC-04:00) America/Grenada</option>
+                                                <option value="America/Indiana/Petersburg">(UTC-04:00) America/Indiana/Petersburg - Eastern - IN (Pike)</option>
+                                                <option value="America/Guyana">(UTC-04:00) America/Guyana</option>
+                                                <option value="America/Kentucky/Monticello">(UTC-04:00) America/Kentucky/Monticello - Eastern - KY (Wayne)</option>
+                                                <option value="America/Martinique">(UTC-04:00) America/Martinique</option>
+                                                <option value="America/Marigot">(UTC-04:00) America/Marigot</option>
+                                                <option value="America/Manaus">(UTC-04:00) America/Manaus - Amazonas (east)</option>
+                                                <option value="America/Montserrat">(UTC-04:00) America/Montserrat</option>
+                                                <option value="America/Lower_Princes">(UTC-04:00) America/Lower_Princes</option>
+                                                <option value="America/Nassau">(UTC-04:00) America/Nassau</option>
+                                                <option value="America/La_Paz">(UTC-04:00) America/La_Paz</option>
+                                                <option value="America/Kralendijk">(UTC-04:00) America/Kralendijk</option>
+                                                <option value="America/Kentucky/Louisville">(UTC-04:00) America/Kentucky/Louisville - Eastern - KY (Louisville area)</option>
+                                                <option value="America/Havana">(UTC-04:00) America/Havana</option>
+                                                <option value="America/New_York">(UTC-04:00) America/New_York - Eastern (most areas)</option>
+                                                <option value="America/Iqaluit">(UTC-04:00) America/Iqaluit - Eastern - NU (most east areas)</option>
+                                                <option value="America/Nipigon">(UTC-04:00) America/Nipigon - Eastern - ON, QC (no DST 1967-73)</option>
+                                                <option value="America/Indiana/Winamac">(UTC-04:00) America/Indiana/Winamac - Eastern - IN (Pulaski)</option>
+                                                <option value="America/Indiana/Vincennes">(UTC-04:00) America/Indiana/Vincennes - Eastern - IN (Da, Du, K, Mn)</option>
+                                                <option value="America/Indiana/Vevay">(UTC-04:00) America/Indiana/Vevay - Eastern - IN (Switzerland)</option>
+                                                <option value="America/Indiana/Marengo">(UTC-04:00) America/Indiana/Marengo - Eastern - IN (Crawford)</option>
+                                                <option value="America/Indiana/Indianapolis">(UTC-04:00) America/Indiana/Indianapolis - Eastern - IN (most areas)</option>
+                                                <option value="America/Puerto_Rico">(UTC-04:00) America/Puerto_Rico</option>
+                                                <option value="America/Caracas">(UTC-04:00) America/Caracas</option>
+                                                <option value="America/Dominica">(UTC-04:00) America/Dominica</option>
+                                                <option value="America/Barbados">(UTC-04:00) America/Barbados</option>
+                                                <option value="America/Antigua">(UTC-04:00) America/Antigua</option>
+                                                <option value="America/Santo_Domingo">(UTC-04:00) America/Santo_Domingo</option>
+                                                <option value="America/St_Barthelemy">(UTC-04:00) America/St_Barthelemy</option>
+                                                <option value="America/St_Kitts">(UTC-04:00) America/St_Kitts</option>
+                                                <option value="America/St_Lucia">(UTC-04:00) America/St_Lucia</option>
+                                                <option value="America/St_Thomas">(UTC-04:00) America/St_Thomas</option>
+                                                <option value="America/St_Vincent">(UTC-04:00) America/St_Vincent</option>
+                                                <option value="America/Aruba">(UTC-04:00) America/Aruba</option>
+                                                <option value="America/Detroit">(UTC-04:00) America/Detroit - Eastern - MI (most areas)</option>
+                                                <option value="America/Thunder_Bay">(UTC-04:00) America/Thunder_Bay - Eastern - ON (Thunder Bay)</option>
+                                                <option value="America/Asuncion">(UTC-04:00) America/Asuncion</option>
+                                                <option value="America/Toronto">(UTC-04:00) America/Toronto - Eastern - ON, QC (most areas)</option>
+                                                <option value="America/Blanc-Sablon">(UTC-04:00) America/Blanc-Sablon - AST - QC (Lower North Shore)</option>
+                                                <option value="America/Curacao">(UTC-04:00) America/Curacao</option>
+                                                <option value="America/Cuiaba">(UTC-04:00) America/Cuiaba - Mato Grosso</option>
+                                                <option value="America/Boa_Vista">(UTC-04:00) America/Boa_Vista - Roraima</option>
+                                                <option value="America/Campo_Grande">(UTC-04:00) America/Campo_Grande - Mato Grosso do Sul</option>
+                                                <option value="America/Tortola">(UTC-04:00) America/Tortola</option>
+                                                <option value="America/Anguilla">(UTC-04:00) America/Anguilla</option>
+                                                <option value="America/Thule">(UTC-03:00) America/Thule - Thule/Pituffik</option>
+                                                <option value="Antarctica/Palmer">(UTC-03:00) Antarctica/Palmer - Palmer</option>
+                                                <option value="America/Montevideo">(UTC-03:00) America/Montevideo</option>
+                                                <option value="Antarctica/Rothera">(UTC-03:00) Antarctica/Rothera - Rothera</option>
+                                                <option value="America/Moncton">(UTC-03:00) America/Moncton - Atlantic - New Brunswick</option>
+                                                <option value="Atlantic/Bermuda">(UTC-03:00) Atlantic/Bermuda</option>
+                                                <option value="America/Sao_Paulo">(UTC-03:00) America/Sao_Paulo - Brazil (southeast: GO, DF, MG, ES, RJ, SP, PR, SC, RS)</option>
+                                                <option value="America/Paramaribo">(UTC-03:00) America/Paramaribo</option>
+                                                <option value="America/Santiago">(UTC-03:00) America/Santiago - Chile (most areas)</option>
+                                                <option value="America/Santarem">(UTC-03:00) America/Santarem - Para (west)</option>
+                                                <option value="America/Recife">(UTC-03:00) America/Recife - Pernambuco</option>
+                                                <option value="Atlantic/Stanley">(UTC-03:00) Atlantic/Stanley</option>
+                                                <option value="America/Maceio">(UTC-03:00) America/Maceio - Alagoas, Sergipe</option>
+                                                <option value="America/Araguaina">(UTC-03:00) America/Araguaina - Tocantins</option>
+                                                <option value="America/Argentina/San_Luis">(UTC-03:00) America/Argentina/San_Luis - San Luis (SL)</option>
+                                                <option value="America/Fortaleza">(UTC-03:00) America/Fortaleza - Brazil (northeast: MA, PI, CE, RN, PB)</option>
+                                                <option value="America/Glace_Bay">(UTC-03:00) America/Glace_Bay - Atlantic - NS (Cape Breton)</option>
+                                                <option value="America/Goose_Bay">(UTC-03:00) America/Goose_Bay - Atlantic - Labrador (most areas)</option>
+                                                <option value="America/Cayenne">(UTC-03:00) America/Cayenne</option>
+                                                <option value="America/Punta_Arenas">(UTC-03:00) America/Punta_Arenas - Region of Magallanes</option>
+                                                <option value="America/Halifax">(UTC-03:00) America/Halifax - Atlantic - NS (most areas); PE</option>
+                                                <option value="America/Belem">(UTC-03:00) America/Belem - Para (east); Amapa</option>
+                                                <option value="America/Argentina/Buenos_Aires">(UTC-03:00) America/Argentina/Buenos_Aires - Buenos Aires (BA, CF)</option>
+                                                <option value="America/Argentina/Ushuaia">(UTC-03:00) America/Argentina/Ushuaia - Tierra del Fuego (TF)</option>
+                                                <option value="America/Argentina/Tucuman">(UTC-03:00) America/Argentina/Tucuman - Tucuman (TM)</option>
+                                                <option value="America/Bahia">(UTC-03:00) America/Bahia - Bahia</option>
+                                                <option value="America/Argentina/San_Juan">(UTC-03:00) America/Argentina/San_Juan - San Juan (SJ)</option>
+                                                <option value="America/Argentina/Salta">(UTC-03:00) America/Argentina/Salta - Salta (SA, LP, NQ, RN)</option>
+                                                <option value="America/Argentina/Catamarca">(UTC-03:00) America/Argentina/Catamarca - Catamarca (CT); Chubut (CH)</option>
+                                                <option value="America/Argentina/Rio_Gallegos">(UTC-03:00) America/Argentina/Rio_Gallegos - Santa Cruz (SC)</option>
+                                                <option value="America/Argentina/Mendoza">(UTC-03:00) America/Argentina/Mendoza - Mendoza (MZ)</option>
+                                                <option value="America/Argentina/La_Rioja">(UTC-03:00) America/Argentina/La_Rioja - La Rioja (LR)</option>
+                                                <option value="America/Argentina/Cordoba">(UTC-03:00) America/Argentina/Cordoba - Argentina (most areas: CB, CC, CN, ER, FM, MN, SE, SF)</option>
+                                                <option value="America/Argentina/Jujuy">(UTC-03:00) America/Argentina/Jujuy - Jujuy (JY)</option>
+                                                <option value="America/St_Johns">(UTC-02:30) America/St_Johns - Newfoundland; Labrador (southeast)</option>
+                                                <option value="Atlantic/South_Georgia">(UTC-02:00) Atlantic/South_Georgia</option>
+                                                <option value="America/Nuuk">(UTC-02:00) America/Nuuk - Greenland (most areas)</option>
+                                                <option value="America/Noronha">(UTC-02:00) America/Noronha - Atlantic islands</option>
+                                                <option value="America/Miquelon">(UTC-02:00) America/Miquelon</option>
+                                                <option value="Atlantic/Cape_Verde">(UTC-01:00) Atlantic/Cape_Verde</option>
+                                                <option value="Atlantic/Azores">(UTC+00:00) Atlantic/Azores - Azores</option>
+                                                <option value="Africa/Accra">(UTC+00:00) Africa/Accra</option>
+                                                <option value="America/Scoresbysund">(UTC+00:00) America/Scoresbysund - Scoresbysund/Ittoqqortoormiit</option>
+                                                <option value="Atlantic/Reykjavik">(UTC+00:00) Atlantic/Reykjavik</option>
+                                                <option value="Atlantic/St_Helena">(UTC+00:00) Atlantic/St_Helena</option>
+                                                <option value="Africa/Abidjan">(UTC+00:00) Africa/Abidjan</option>
+                                                <option value="UTC">(UTC+00:00) UTC</option>
+                                                <option value="America/Danmarkshavn">(UTC+00:00) America/Danmarkshavn - National Park (east coast)</option>
+                                                <option value="Africa/Monrovia">(UTC+00:00) Africa/Monrovia</option>
+                                                <option value="Africa/Conakry">(UTC+00:00) Africa/Conakry</option>
+                                                <option value="Africa/Freetown">(UTC+00:00) Africa/Freetown</option>
+                                                <option value="Africa/Bissau">(UTC+00:00) Africa/Bissau</option>
+                                                <option value="Africa/Banjul">(UTC+00:00) Africa/Banjul</option>
+                                                <option value="Africa/Bamako">(UTC+00:00) Africa/Bamako</option>
+                                                <option value="Africa/Lome">(UTC+00:00) Africa/Lome</option>
+                                                <option value="Africa/Dakar">(UTC+00:00) Africa/Dakar</option>
+                                                <option value="Africa/Ouagadougou">(UTC+00:00) Africa/Ouagadougou</option>
+                                                <option value="Africa/Sao_Tome">(UTC+00:00) Africa/Sao_Tome</option>
+                                                <option value="Africa/Nouakchott">(UTC+00:00) Africa/Nouakchott</option>
+                                                <option value="Africa/Ndjamena">(UTC+01:00) Africa/Ndjamena</option>
+                                                <option value="Africa/Porto-Novo">(UTC+01:00) Africa/Porto-Novo</option>
+                                                <option value="Africa/Brazzaville">(UTC+01:00) Africa/Brazzaville</option>
+                                                <option value="Atlantic/Faroe">(UTC+01:00) Atlantic/Faroe</option>
+                                                <option value="Africa/El_Aaiun">(UTC+01:00) Africa/El_Aaiun</option>
+                                                <option value="Atlantic/Madeira">(UTC+01:00) Atlantic/Madeira - Madeira Islands</option>
+                                                <option value="Atlantic/Canary">(UTC+01:00) Atlantic/Canary - Canary Islands</option>
+                                                <option value="Africa/Tunis">(UTC+01:00) Africa/Tunis</option>
+                                                <option value="Africa/Casablanca">(UTC+01:00) Africa/Casablanca</option>
+                                                <option value="Africa/Douala">(UTC+01:00) Africa/Douala</option>
+                                                <option value="Europe/London">(UTC+01:00) Europe/London</option>
+                                                <option value="Europe/Lisbon">(UTC+01:00) Europe/Lisbon - Portugal (mainland)</option>
+                                                <option value="Europe/Jersey">(UTC+01:00) Europe/Jersey</option>
+                                                <option value="Europe/Isle_of_Man">(UTC+01:00) Europe/Isle_of_Man</option>
+                                                <option value="Europe/Guernsey">(UTC+01:00) Europe/Guernsey</option>
+                                                <option value="Africa/Bangui">(UTC+01:00) Africa/Bangui</option>
+                                                <option value="Europe/Dublin">(UTC+01:00) Europe/Dublin</option>
+                                                <option value="Africa/Libreville">(UTC+01:00) Africa/Libreville</option>
+                                                <option value="Africa/Niamey">(UTC+01:00) Africa/Niamey</option>
+                                                <option value="Africa/Algiers">(UTC+01:00) Africa/Algiers</option>
+                                                <option value="Africa/Lagos">(UTC+01:00) Africa/Lagos</option>
+                                                <option value="Africa/Kinshasa">(UTC+01:00) Africa/Kinshasa - Dem. Rep. of Congo (west)</option>
+                                                <option value="Africa/Malabo">(UTC+01:00) Africa/Malabo</option>
+                                                <option value="Africa/Luanda">(UTC+01:00) Africa/Luanda</option>
+                                                <option value="Europe/Berlin">(UTC+02:00) Europe/Berlin - Germany (most areas) </option>
+                                                <option value="Europe/Bratislava">(UTC+02:00) Europe/Bratislava </option>
+                                                <option value="Europe/Monaco">(UTC+02:00) Europe/Monaco </option>
+                                                <option value="Europe/Podgorica">(UTC+02:00) Europe/Podgorica </option>
+                                                <option value="Europe/Oslo">(UTC+02:00) Europe/Oslo </option>
+                                                <option value="Europe/Paris">(UTC+02:00) Europe/Paris </option>
+                                                <option value="Europe/Prague">(UTC+02:00) Europe/Prague </option>
+                                                <option value="Europe/Belgrade">(UTC+02:00) Europe/Belgrade </option>
+                                                <option value="Europe/Rome">(UTC+02:00) Europe/Rome </option>
+                                                <option value="Europe/Brussels">(UTC+02:00) Europe/Brussels </option>
+                                                <option value="Africa/Harare">(UTC+02:00) Africa/Harare </option>
+                                                <option value="Europe/Malta">(UTC+02:00) Europe/Malta </option>
+                                                <option value="Europe/Madrid">(UTC+02:00) Europe/Madrid - Spain (mainland) </option>
+                                                <option value="Europe/Sarajevo">(UTC+02:00) Europe/Sarajevo </option>
+                                                <option value="Europe/Luxembourg">(UTC+02:00) Europe/Luxembourg </option>
+                                                <option value="Africa/Maputo">(UTC+02:00) Africa/Maputo </option>
+                                                <option value="Europe/Ljubljana">(UTC+02:00) Europe/Ljubljana </option>
+                                                <option value="Africa/Maseru">(UTC+02:00) Africa/Maseru </option>
+                                                <option value="Europe/Budapest">(UTC+02:00) Europe/Budapest </option>
+                                                <option value="Europe/Kaliningrad">(UTC+02:00) Europe/Kaliningrad - MSK-01 - Kaliningrad </option>
+                                                <option value="Africa/Mbabane">(UTC+02:00) Africa/Mbabane </option>
+                                                <option value="Europe/Busingen">(UTC+02:00) Europe/Busingen - Busingen </option>
+                                                <option value="Europe/Gibraltar">(UTC+02:00) Europe/Gibraltar </option>
+                                                <option value="Europe/San_Marino">(UTC+02:00) Europe/San_Marino </option>
+                                                <option value="Europe/Andorra">(UTC+02:00) Europe/Andorra </option>
+                                                <option value="Europe/Warsaw">(UTC+02:00) Europe/Warsaw </option>
+                                                <option value="Europe/Skopje">(UTC+02:00) Europe/Skopje </option>
+                                                <option value="Africa/Juba">(UTC+02:00) Africa/Juba </option>
+                                                <option value="Africa/Windhoek">(UTC+02:00) Africa/Windhoek </option>
+                                                <option value="Africa/Khartoum">(UTC+02:00) Africa/Khartoum </option>
+                                                <option value="Africa/Blantyre">(UTC+02:00) Africa/Blantyre </option>
+                                                <option value="Africa/Kigali">(UTC+02:00) Africa/Kigali </option>
+                                                <option value="Africa/Gaborone">(UTC+02:00) Africa/Gaborone </option>
+                                                <option value="Africa/Tripoli">(UTC+02:00) Africa/Tripoli </option>
+                                                <option value="Africa/Bujumbura">(UTC+02:00) Africa/Bujumbura </option>
+                                                <option value="Antarctica/Troll">(UTC+02:00) Antarctica/Troll - Troll </option>
+                                                <option value="Africa/Cairo">(UTC+02:00) Africa/Cairo </option>
+                                                <option value="Arctic/Longyearbyen">(UTC+02:00) Arctic/Longyearbyen </option>
+                                                <option value="Europe/Copenhagen">(UTC+02:00) Europe/Copenhagen </option>
+                                                <option value="Europe/Zurich">(UTC+02:00) Europe/Zurich </option>
+                                                <option value="Europe/Zagreb">(UTC+02:00) Europe/Zagreb </option>
+                                                <option value="Africa/Lubumbashi">(UTC+02:00) Africa/Lubumbashi - Dem. Rep. of Congo (east) </option>
+                                                <option value="Africa/Ceuta">(UTC+02:00) Africa/Ceuta - Ceuta, Melilla </option>
+                                                <option value="Africa/Lusaka">(UTC+02:00) Africa/Lusaka </option>
+                                                <option value="Europe/Vienna">(UTC+02:00) Europe/Vienna </option>
+                                                <option value="Europe/Vatican">(UTC+02:00) Europe/Vatican </option>
+                                                <option value="Europe/Vaduz">(UTC+02:00) Europe/Vaduz </option>
+                                                <option value="Europe/Tirane">(UTC+02:00) Europe/Tirane </option>
+                                                <option value="Europe/Amsterdam">(UTC+02:00) Europe/Amsterdam </option>
+                                                <option value="Europe/Stockholm">(UTC+02:00) Europe/Stockholm </option>
+                                                <option value="Africa/Johannesburg">(UTC+02:00) Africa/Johannesburg </option>
+                                                <option value="Europe/Bucharest">(UTC+03:00) Europe/Bucharest </option>
+                                                <option value="Europe/Chisinau">(UTC+03:00) Europe/Chisinau </option>
+                                                <option value="Europe/Athens">(UTC+03:00) Europe/Athens </option>
+                                                <option value="Europe/Uzhgorod">(UTC+03:00) Europe/Uzhgorod - Transcarpathia </option>
+                                                <option value="Europe/Helsinki">(UTC+03:00) Europe/Helsinki </option>
+                                                <option value="Europe/Vilnius">(UTC+03:00) Europe/Vilnius </option>
+                                                <option value="Africa/Addis_Ababa">(UTC+03:00) Africa/Addis_Ababa </option>
+                                                <option value="Africa/Asmara">(UTC+03:00) Africa/Asmara </option>
+                                                <option value="Indian/Mayotte">(UTC+03:00) Indian/Mayotte </option>
+                                                <option value="Indian/Comoro">(UTC+03:00) Indian/Comoro </option>
+                                                <option value="Indian/Antananarivo">(UTC+03:00) Indian/Antananarivo </option>
+                                                <option value="Europe/Zaporozhye">(UTC+03:00) Europe/Zaporozhye - Zaporozhye and east Lugansk </option>
+                                                <option value="Europe/Volgograd">(UTC+03:00) Europe/Volgograd - MSK+00 - Volgograd </option>
+                                                <option value="Europe/Tallinn">(UTC+03:00) Europe/Tallinn </option>
+                                                <option value="Europe/Istanbul">(UTC+03:00) Europe/Istanbul </option>
+                                                <option value="Europe/Sofia">(UTC+03:00) Europe/Sofia </option>
+                                                <option value="Europe/Simferopol">(UTC+03:00) Europe/Simferopol - Crimea </option>
+                                                <option value="Europe/Riga">(UTC+03:00) Europe/Riga </option>
+                                                <option value="Europe/Moscow">(UTC+03:00) Europe/Moscow - MSK+00 - Moscow area </option>
+                                                <option value="Europe/Minsk">(UTC+03:00) Europe/Minsk </option>
+                                                <option value="Europe/Mariehamn">(UTC+03:00) Europe/Mariehamn </option>
+                                                <option value="Europe/Kirov">(UTC+03:00) Europe/Kirov - MSK+00 - Kirov </option>
+                                                <option value="Europe/Kiev">(UTC+03:00) Europe/Kiev - Ukraine (most areas) </option>
+                                                <option value="Africa/Djibouti">(UTC+03:00) Africa/Djibouti </option>
+                                                <option value="Africa/Dar_es_Salaam">(UTC+03:00) Africa/Dar_es_Salaam </option>
+                                                <option value="Asia/Qatar">(UTC+03:00) Asia/Qatar </option>
+                                                <option value="Asia/Amman">(UTC+03:00) Asia/Amman </option>
+                                                <option value="Asia/Riyadh">(UTC+03:00) Asia/Riyadh </option>
+                                                <option value="Asia/Beirut">(UTC+03:00) Asia/Beirut </option>
+                                                <option value="Asia/Gaza">(UTC+03:00) Asia/Gaza - Gaza Strip </option>
+                                                <option value="Asia/Bahrain">(UTC+03:00) Asia/Bahrain </option>
+                                                <option value="Asia/Hebron">(UTC+03:00) Asia/Hebron - West Bank </option>
+                                                <option value="Asia/Jerusalem">(UTC+03:00) Asia/Jerusalem </option>
+                                                <option value="Asia/Baghdad">(UTC+03:00) Asia/Baghdad </option>
+                                                <option value="Asia/Kuwait">(UTC+03:00) Asia/Kuwait </option>
+                                                <option value="Asia/Famagusta">(UTC+03:00) Asia/Famagusta - Northern Cyprus </option>
+                                                <option value="Asia/Aden">(UTC+03:00) Asia/Aden </option>
+                                                <option value="Asia/Nicosia">(UTC+03:00) Asia/Nicosia - Cyprus (most areas) </option>
+                                                <option value="Antarctica/Syowa">(UTC+03:00) Antarctica/Syowa - Syowa </option>
+                                                <option value="Africa/Kampala">(UTC+03:00) Africa/Kampala </option>
+                                                <option value="Africa/Mogadishu">(UTC+03:00) Africa/Mogadishu </option>
+                                                <option value="Africa/Nairobi">(UTC+03:00) Africa/Nairobi </option>
+                                                <option value="Asia/Damascus">(UTC+03:00) Asia/Damascus </option>
+                                                <option value="Asia/Muscat">(UTC+04:00) Asia/Muscat </option>
+                                                <option value="Asia/Dubai">(UTC+04:00) Asia/Dubai </option>
+                                                <option value="Europe/Samara">(UTC+04:00) Europe/Samara - MSK+01 - Samara, Udmurtia </option>
+                                                <option value="Europe/Saratov">(UTC+04:00) Europe/Saratov - MSK+01 - Saratov </option>
+                                                <option value="Europe/Ulyanovsk">(UTC+04:00) Europe/Ulyanovsk - MSK+01 - Ulyanovsk </option>
+                                                <option value="Europe/Astrakhan">(UTC+04:00) Europe/Astrakhan - MSK+01 - Astrakhan </option>
+                                                <option value="Asia/Tbilisi">(UTC+04:00) Asia/Tbilisi </option>
+                                                <option value="Asia/Yerevan">(UTC+04:00) Asia/Yerevan </option>
+                                                <option value="Indian/Mahe">(UTC+04:00) Indian/Mahe </option>
+                                                <option value="Indian/Mauritius">(UTC+04:00) Indian/Mauritius </option>
+                                                <option value="Indian/Reunion">(UTC+04:00) Indian/Reunion </option>
+                                                <option value="Asia/Baku">(UTC+04:00) Asia/Baku </option>
+                                                <option value="Asia/Kabul">(UTC+04:30) Asia/Kabul</option>
+                                                <option value="Asia/Tehran">(UTC+04:30) Asia/Tehran</option>
+                                                <option value="Asia/Tashkent">(UTC+05:00) Asia/Tashkent - Uzbekistan (east)</option>
+                                                <option value="Asia/Aqtau">(UTC+05:00) Asia/Aqtau - Mangghystau/Mankistau</option>
+                                                <option value="Asia/Karachi">(UTC+05:00) Asia/Karachi</option>
+                                                <option value="Asia/Dushanbe">(UTC+05:00) Asia/Dushanbe</option>
+                                                <option value="Asia/Samarkand">(UTC+05:00) Asia/Samarkand - Uzbekistan (west)</option>
+                                                <option value="Asia/Yekaterinburg">(UTC+05:00) Asia/Yekaterinburg - MSK+02 - Urals</option>
+                                                <option value="Asia/Atyrau">(UTC+05:00) Asia/Atyrau - Atyrau/Atirau/Gur'yev</option>
+                                                <option value="Asia/Ashgabat">(UTC+05:00) Asia/Ashgabat</option>
+                                                <option value="Asia/Aqtobe">(UTC+05:00) Asia/Aqtobe - Aqtobe/Aktobe</option>
+                                                <option value="Asia/Oral">(UTC+05:00) Asia/Oral - West Kazakhstan</option>
+                                                <option value="Indian/Kerguelen">(UTC+05:00) Indian/Kerguelen</option>
+                                                <option value="Indian/Maldives">(UTC+05:00) Indian/Maldives</option>
+                                                <option value="Antarctica/Mawson">(UTC+05:00) Antarctica/Mawson - Mawson</option>
+                                                <option value="Asia/Qyzylorda">(UTC+05:00) Asia/Qyzylorda - Qyzylorda/Kyzylorda/Kzyl-Orda</option>
+                                                <option value="Asia/Kolkata">(UTC+05:30) Asia/Kolkata</option>
+                                                <option value="Asia/Colombo">(UTC+05:30) Asia/Colombo</option>
+                                                <option value="Asia/Kathmandu">(UTC+05:45) Asia/Kathmandu</option>
+                                                <option value="Indian/Chagos">(UTC+06:00) Indian/Chagos</option>
+                                                <option value="Antarctica/Vostok">(UTC+06:00) Antarctica/Vostok - Vostok</option>
+                                                <option value="Asia/Bishkek">(UTC+06:00) Asia/Bishkek</option>
+                                                <option value="Asia/Dhaka">(UTC+06:00) Asia/Dhaka</option>
+                                                <option value="Asia/Urumqi">(UTC+06:00) Asia/Urumqi - Xinjiang Time</option>
+                                                <option value="Asia/Thimphu">(UTC+06:00) Asia/Thimphu</option>
+                                                <option value="Asia/Almaty">(UTC+06:00) Asia/Almaty - Kazakhstan (most areas)</option>
+                                                <option value="Asia/Qostanay">(UTC+06:00) Asia/Qostanay - Qostanay/Kostanay/Kustanay</option>
+                                                <option value="Asia/Omsk">(UTC+06:00) Asia/Omsk - MSK+03 - Omsk</option>
+                                                <option value="Asia/Yangon">(UTC+06:30) Asia/Yangon</option>
+                                                <option value="Indian/Cocos">(UTC+06:30) Indian/Cocos</option>
+                                                <option value="Asia/Novokuznetsk">(UTC+07:00) Asia/Novokuznetsk - MSK+04 - Kemerovo</option>
+                                                <option value="Asia/Pontianak">(UTC+07:00) Asia/Pontianak - Borneo (west, central)</option>
+                                                <option value="Asia/Krasnoyarsk">(UTC+07:00) Asia/Krasnoyarsk - MSK+04 - Krasnoyarsk area</option>
+                                                <option value="Asia/Novosibirsk">(UTC+07:00) Asia/Novosibirsk - MSK+04 - Novosibirsk</option>
+                                                <option value="Asia/Vientiane">(UTC+07:00) Asia/Vientiane</option>
+                                                <option value="Antarctica/Davis">(UTC+07:00) Antarctica/Davis - Davis</option>
+                                                <option value="Asia/Ho_Chi_Minh">(UTC+07:00) Asia/Ho_Chi_Minh</option>
+                                                <option value="Asia/Barnaul">(UTC+07:00) Asia/Barnaul - MSK+04 - Altai</option>
+                                                <option value="Asia/Hovd">(UTC+07:00) Asia/Hovd - Bayan-Olgiy, Govi-Altai, Hovd, Uvs, Zavkhan</option>
+                                                <option value="Asia/Bangkok">(UTC+07:00) Asia/Bangkok</option>
+                                                <option value="Asia/Jakarta">(UTC+07:00) Asia/Jakarta - Java, Sumatra</option>
+                                                <option value="Indian/Christmas">(UTC+07:00) Indian/Christmas</option>
+                                                <option value="Asia/Tomsk">(UTC+07:00) Asia/Tomsk - MSK+04 - Tomsk</option>
+                                                <option value="Asia/Phnom_Penh">(UTC+07:00) Asia/Phnom_Penh</option>
+                                                <option value="Asia/Taipei">(UTC+08:00) Asia/Taipei</option>
+                                                <option value="Asia/Singapore">(UTC+08:00) Asia/Singapore</option>
+                                                <option value="Asia/Manila">(UTC+08:00) Asia/Manila</option>
+                                                <option value="Asia/Brunei">(UTC+08:00) Asia/Brunei</option>
+                                                <option value="Australia/Perth">(UTC+08:00) Australia/Perth - Western Australia (most areas)</option>
+                                                <option value="Asia/Choibalsan">(UTC+08:00) Asia/Choibalsan - Dornod, Sukhbaatar</option>
+                                                <option value="Asia/Makassar">(UTC+08:00) Asia/Makassar - Borneo (east, south); Sulawesi/Celebes, Bali, Nusa Tengarra; Timor (west)</option>
+                                                <option value="Asia/Shanghai">(UTC+08:00) Asia/Shanghai - Beijing Time</option>
+                                                <option value="Asia/Macau">(UTC+08:00) Asia/Macau</option>
+                                                <option value="Asia/Kuching">(UTC+08:00) Asia/Kuching - Sabah, Sarawak</option>
+                                                <option value="Asia/Hong_Kong">(UTC+08:00) Asia/Hong_Kong</option>
+                                                <option value="Asia/Irkutsk">(UTC+08:00) Asia/Irkutsk - MSK+05 - Irkutsk, Buryatia</option>
+                                                <option value="Asia/Ulaanbaatar">(UTC+08:00) Asia/Ulaanbaatar - Mongolia (most areas)</option>
+                                                <option value="Asia/Kuala_Lumpur">(UTC+08:00) Asia/Kuala_Lumpur - Malaysia (peninsula)</option>
+                                                <option value="Australia/Eucla">(UTC+08:45) Australia/Eucla - Western Australia (Eucla)</option>
+                                                <option value="Pacific/Palau">(UTC+09:00) Pacific/Palau</option>
+                                                <option value="Asia/Tokyo">(UTC+09:00) Asia/Tokyo</option>
+                                                <option value="Asia/Pyongyang">(UTC+09:00) Asia/Pyongyang</option>
+                                                <option value="Asia/Khandyga">(UTC+09:00) Asia/Khandyga - MSK+06 - Tomponsky, Ust-Maysky</option>
+                                                <option value="Asia/Yakutsk">(UTC+09:00) Asia/Yakutsk - MSK+06 - Lena River</option>
+                                                <option value="Asia/Chita">(UTC+09:00) Asia/Chita - MSK+06 - Zabaykalsky</option>
+                                                <option value="Asia/Seoul">(UTC+09:00) Asia/Seoul</option>
+                                                <option value="Asia/Dili">(UTC+09:00) Asia/Dili</option>
+                                                <option value="Asia/Jayapura">(UTC+09:00) Asia/Jayapura - New Guinea (West Papua / Irian Jaya); Malukus/Moluccas</option>
+                                                <option value="Australia/Darwin">(UTC+09:30) Australia/Darwin - Northern Territory</option>
+                                                <option value="Australia/Broken_Hill">(UTC+09:30) Australia/Broken_Hill - New South Wales (Yancowinna)</option>
+                                                <option value="Australia/Adelaide">(UTC+09:30) Australia/Adelaide - South Australia</option>
+                                                <option value="Australia/Melbourne">(UTC+10:00) Australia/Melbourne - Victoria</option>
+                                                <option value="Pacific/Saipan">(UTC+10:00) Pacific/Saipan</option>
+                                                <option value="Pacific/Port_Moresby">(UTC+10:00) Pacific/Port_Moresby - Papua New Guinea (most areas)</option>
+                                                <option value="Australia/Brisbane">(UTC+10:00) Australia/Brisbane - Queensland (most areas)</option>
+                                                <option value="Antarctica/DumontDUrville">(UTC+10:00) Antarctica/DumontDUrville - Dumont-d'Urville</option>
+                                                <option value="Antarctica/Macquarie">(UTC+10:00) Antarctica/Macquarie - Macquarie Island</option>
+                                                <option value="Pacific/Guam">(UTC+10:00) Pacific/Guam</option>
+                                                <option value="Australia/Lindeman">(UTC+10:00) Australia/Lindeman - Queensland (Whitsunday Islands)</option>
+                                                <option value="Pacific/Chuuk">(UTC+10:00) Pacific/Chuuk - Chuuk/Truk, Yap</option>
+                                                <option value="Asia/Vladivostok">(UTC+10:00) Asia/Vladivostok - MSK+07 - Amur River</option>
+                                                <option value="Australia/Hobart">(UTC+10:00) Australia/Hobart - Tasmania</option>
+                                                <option value="Australia/Sydney">(UTC+10:00) Australia/Sydney - New South Wales (most areas)</option>
+                                                <option value="Asia/Ust-Nera">(UTC+10:00) Asia/Ust-Nera - MSK+07 - Oymyakonsky</option>
+                                                <option value="Australia/Lord_Howe">(UTC+10:30) Australia/Lord_Howe - Lord Howe Island</option>
+                                                <option value="Pacific/Guadalcanal">(UTC+11:00) Pacific/Guadalcanal</option>
+                                                <option value="Pacific/Efate">(UTC+11:00) Pacific/Efate</option>
+                                                <option value="Asia/Srednekolymsk">(UTC+11:00) Asia/Srednekolymsk - MSK+08 - Sakha (E); North Kuril Is</option>
+                                                <option value="Pacific/Pohnpei">(UTC+11:00) Pacific/Pohnpei - Pohnpei/Ponape</option>
+                                                <option value="Asia/Magadan">(UTC+11:00) Asia/Magadan - MSK+08 - Magadan</option>
+                                                <option value="Antarctica/Casey">(UTC+11:00) Antarctica/Casey - Casey</option>
+                                                <option value="Pacific/Noumea">(UTC+11:00) Pacific/Noumea</option>
+                                                <option value="Asia/Sakhalin">(UTC+11:00) Asia/Sakhalin - MSK+08 - Sakhalin Island</option>
+                                                <option value="Pacific/Norfolk">(UTC+11:00) Pacific/Norfolk</option>
+                                                <option value="Pacific/Bougainville">(UTC+11:00) Pacific/Bougainville - Bougainville</option>
+                                                <option value="Pacific/Kosrae">(UTC+11:00) Pacific/Kosrae - Kosrae</option>
+                                                <option value="Pacific/Majuro">(UTC+12:00) Pacific/Majuro - Marshall Islands (most areas)</option>
+                                                <option value="Pacific/Wallis">(UTC+12:00) Pacific/Wallis</option>
+                                                <option value="Pacific/Wake">(UTC+12:00) Pacific/Wake - Wake Island</option>
+                                                <option value="Pacific/Tarawa">(UTC+12:00) Pacific/Tarawa - Gilbert Islands</option>
+                                                <option value="Asia/Kamchatka">(UTC+12:00) Asia/Kamchatka - MSK+09 - Kamchatka</option>
+                                                <option value="Antarctica/McMurdo">(UTC+12:00) Antarctica/McMurdo - New Zealand time - McMurdo, South Pole</option>
+                                                <option value="Asia/Anadyr">(UTC+12:00) Asia/Anadyr - MSK+09 - Bering Sea</option>
+                                                <option value="Pacific/Funafuti">(UTC+12:00) Pacific/Funafuti</option>
+                                                <option value="Pacific/Auckland">(UTC+12:00) Pacific/Auckland - New Zealand (most areas)</option>
+                                                <option value="Pacific/Nauru">(UTC+12:00) Pacific/Nauru</option>
+                                                <option value="Pacific/Kwajalein">(UTC+12:00) Pacific/Kwajalein - Kwajalein</option>
+                                                <option value="Pacific/Fiji">(UTC+12:00) Pacific/Fiji</option>
+                                                <option value="Pacific/Chatham">(UTC+12:45) Pacific/Chatham - Chatham Islands</option>
+                                                <option value="Pacific/Fakaofo">(UTC+13:00) Pacific/Fakaofo</option>
+                                                <option value="Pacific/Apia">(UTC+13:00) Pacific/Apia</option>
+                                                <option value="Pacific/Enderbury">(UTC+13:00) Pacific/Enderbury - Phoenix Islands</option>
+                                                <option value="Pacific/Tongatapu">(UTC+13:00) Pacific/Tongatapu</option>
+                                                <option value="Pacific/Kiritimati">(UTC+14:00) Pacific/Kiritimati - Line Islands </option>
+                                            </select>
                                             <table class="table availability-table">
                                                 <thead>
                                                     <tr>
@@ -619,92 +835,38 @@ table.table>thead>tr>th {
 				</div>
 			</div>
 		</div>
-		<!-- END PAGE FOOTER -->
-		<!--================================================== -->
-		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
 		<script data-pace-options='{ "restartOnRequestAfter": true }' src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/pace/pace.min.js?v=2373"></script>
-		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-		<!-- IMPORTANT: APP CONFIG -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/app.config.js"></script>
-
-		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js?v=2373"></script>
-
-		<!-- BOOTSTRAP JS -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/bootstrap/bootstrap.min.js"></script>
-
-		<!-- CUSTOM NOTIFICATION -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/notification/SmartNotification.min.js"></script>
-
-		<!-- JARVIS WIDGETS -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/smartwidgets/jarvis.widget.min.js"></script>
-
-		<!-- EASY PIE CHARTS -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js?v=2373"></script>
-
-		<!-- SPARKLINES -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/sparkline/jquery.sparkline.min.js?v=2373"></script>
-
-		<!-- JQUERY VALIDATE -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/jquery-validate/jquery.validate.min.js?v=2373"></script>
-
-		<!-- JQUERY MASKED INPUT -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/masked-input/jquery.maskedinput.min.js?v=2373"></script>
-
-		<!-- JQUERY SELECT2 INPUT -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/select2/select2.min.js?v=2373"></script>
-
-		<!-- JQUERY UI + Bootstrap Slider -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/bootstrap-slider/bootstrap-slider.min.js?v=2373"></script>
-
-		<!-- browser msie issue fix -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/msie-fix/jquery.mb.browser.min.js?v=2373"></script>
-
-		<!-- FastClick: For mobile devices -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/plugin/fastclick/fastclick.min.js?v=2373"></script>
-		<!--[if IE 8]>
-		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
-		<![endif]-->
-
-		<!-- MAIN APP JS FILE -->
 		<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/smartadmin-1.9.0/js/app.min.js"></script>
-
-		<script>
-			$(document).ready(function() {
-
-				// DO NOT REMOVE : GLOBAL FUNCTIONS!
-				pageSetUp();
-
-				/*
-				 * PAGE RELATED SCRIPTS
-				 */
-
-			});
-
-		</script>
-	<script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/js/intlTelInput-2373.min.js"></script>
+	    <script src="https://44dce5837a1ab2e37783-0acd04fb4dd408c03d789b5ba45381c4.ssl.cf2.rackcdn.com/assets/js/intlTelInput-2373.min.js"></script>
+		<script>$(document).ready(function() { pageSetUp(); });</script>
+        <!--* SELECTIZE -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+        <!--* FLATPICKR -->
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <!--* CUSTOM JS -->
         <script>
-            var isMobile = false;
-            // device detection
-            if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) {
-                isMobile = true;
-            }
-        </script>
-        <script>
-            $('#showAvailabilityBtn').click(function() {
-                if ($('#myIcon').hasClass('fa-chevron-right')) {
-                    $('#myIcon').removeClass('fa-chevron-right'); $('#myIcon').addClass('fa-chevron-down');
-                } else {
-                    $('#myIcon').removeClass('fa-chevron-down'); $('#myIcon').addClass('fa-chevron-right');
-                }
+            $(document).ready(function () {
+                $('#select-timezone').selectize({
+                    sortField: 'text'
+                });
             });
-            $(".custom-start-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "h:i K", defaultDate: "9:00 AM", wrap: true, disableMobile: "true" });
-            $(".custom-end-time").flatpickr({ enableTime: true, noCalendar: true, dateFormat: "h:i K", defaultDate: "5:00 PM", wrap: true, disableMobile: "true" });
+
             $(document).ready(function() {
                 if ($('.activate-chat-checkbox-sun').prop('checked') == false) {
                     $('.start-time-sun').val('').hide();
@@ -749,6 +911,34 @@ table.table>thead>tr>th {
                     $(".tr-saturday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
+
+            $(".custom-start-time").flatpickr({
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "h:i K",
+                defaultDate: "9:00 AM",
+                wrap: true,
+                disableMobile: "true"
+            });
+
+            $(".custom-end-time").flatpickr({
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "h:i K",
+                defaultDate: "5:00 PM",
+                wrap: true,
+                disableMobile: "true"
+            });
+
+            $('#showAvailabilityBtn').click(function() {
+                if ($('#myIcon').hasClass('fa-chevron-right')) {
+                    $('#myIcon').removeClass('fa-chevron-right'); $('#myIcon').addClass('fa-chevron-down');
+                } else {
+                    $('#myIcon').removeClass('fa-chevron-down'); $('#myIcon').addClass('fa-chevron-right');
+                }
+
+            });
+
             $('.activate-chat-checkbox-sun').change(function() {
                 if ($('.activate-chat-checkbox-sun').prop('checked') == true) {
                     $('.start-time-sun').val('9:00 AM').show();
@@ -762,6 +952,7 @@ table.table>thead>tr>th {
                     $(".tr-sunday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
+
             $('.activate-chat-checkbox-mon').change(function() {
                 if ($('.activate-chat-checkbox-mon').prop('checked') == true) {
                     $('.start-time-mon').val('9:00 AM').show();
@@ -775,6 +966,7 @@ table.table>thead>tr>th {
                     $(".tr-monday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
+
             $('.activate-chat-checkbox-tue').change(function() {
                 if ($('.activate-chat-checkbox-tue').prop('checked') == true) {
                     $('.start-time-tue').val('9:00 AM').show();
@@ -788,6 +980,7 @@ table.table>thead>tr>th {
                     $(".tr-tuesday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
+
             $('.activate-chat-checkbox-wed').change(function() {
                 if ($('.activate-chat-checkbox-wed').prop('checked') == true) {
                     $('.start-time-wed').val('9:00 AM').show();
@@ -801,6 +994,7 @@ table.table>thead>tr>th {
                     $(".tr-wednesday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
+
             $('.activate-chat-checkbox-thu').change(function() {
                 if ($('.activate-chat-checkbox-thu').prop('checked') == true) {
                     $('.start-time-thu').val('9:00 AM').show();
@@ -814,6 +1008,7 @@ table.table>thead>tr>th {
                     $(".tr-thursday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
+
             $('.activate-chat-checkbox-fri').change(function() {
                 if ($('.activate-chat-checkbox-fri').prop('checked') == true) {
                     $('.start-time-fri').val('9:00 AM').show();
@@ -827,6 +1022,7 @@ table.table>thead>tr>th {
                     $(".tr-friday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
+
             $('.activate-chat-checkbox-sat').change(function() {
                 if ($('.activate-chat-checkbox-sat').prop('checked') == true) {
                     $('.start-time-sat').val('9:00 AM').show();
@@ -840,6 +1036,12 @@ table.table>thead>tr>th {
                     $(".tr-saturday").css({ backgroundColor: "#EEEEEE" });
                 }
             });
+
+            var isMobile = false;
+            // device detection
+            if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) {
+                isMobile = true;
+            }
         </script>
 </body>
 </html>
