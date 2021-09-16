@@ -188,10 +188,10 @@
                             <fieldset style="background-color: #f9f9f9;">
                                 <legend>Customer Service Availability</legend>
                                 <section>
-                                    <button type="button" id="showAvailabilityBtn" class="btn btn-sm" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                        Update Schedule&nbsp;&nbsp;<i id="myIcon" class="fa fa-chevron-right" style="font-size: 10px;" aria-hidden="true"></i>
+                                    <button type="button" id="showAvailabilityBtn" class="btn btn-sm" data-toggle="collapse" data-target="#collapse-chat-availability" aria-expanded="false" aria-controls="collapse-chat-availability">
+                                        Update Schedule&nbsp;&nbsp;<i id="availability-btn-icon" class="fa fa-chevron-right" style="font-size: 10px;" aria-hidden="true"></i>
                                     </button>
-                                    <div class="collapse" id="collapseExample">
+                                    <div class="collapse" id="collapse-chat-availability">
                                         <div class="card">
                                             <select id="select-timezone" placeholder="Select a default timezone...">
                                                 <option value="">Select a default timezone...</option>
@@ -638,13 +638,13 @@
                                                         </td>
                                                         <td>
                                                             <div class="custom-start-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 start-time-sun" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select start-time-sun" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-sun" title="update start time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="custom-end-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 end-time-sun" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select end-time-sun" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-sun" title="update end time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
@@ -657,13 +657,13 @@
                                                         </td>
                                                         <td>
                                                             <div class="custom-start-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 start-time-mon" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select start-time-mon" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-mon" title="update start time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="custom-end-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 end-time-mon" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select end-time-mon" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-mon" title="update end time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
@@ -676,13 +676,13 @@
                                                         </td>
                                                         <td>
                                                             <div class="custom-start-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 start-time-tue" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select start-time-tue" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-tue" title="update start time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="custom-end-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 end-time-tue" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select end-time-tue" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-tue" title="update end time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
@@ -695,13 +695,13 @@
                                                         </td>
                                                         <td>
                                                             <div class="custom-start-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 start-time-wed" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select start-time-wed" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-wed" title="update start time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="custom-end-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 end-time-wed" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select end-time-wed" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-wed" title="update end time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
@@ -714,13 +714,13 @@
                                                         </td>
                                                         <td>
                                                             <div class="custom-start-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 start-time-thu" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select start-time-thu" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-thu" title="update start time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="custom-end-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 end-time-thu" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select end-time-thu" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-thu" title="update end time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
@@ -733,13 +733,13 @@
                                                         </td>
                                                         <td>
                                                             <div class="custom-start-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 start-time-fri" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select start-time-fri" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-fri" title="update start time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="custom-end-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 end-time-fri" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select end-time-fri" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-fri" title="update end time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
@@ -752,13 +752,13 @@
                                                         </td>
                                                         <td>
                                                             <div class="custom-start-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 start-time-sat" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select start-time-sat" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-sat" title="update start time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class="custom-end-time input-group flex-cell">
-                                                                <input class="form-control hours-select2 end-time-sat" type="time" data-input="" readonly="readonly" />
+                                                                <input class="form-control hours-select end-time-sat" type="time" data-input="" readonly="readonly" />
                                                                 <a class="btn input-button set-time-sat" title="update end time" data-toggle=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                             </div>
                                                         </td>
@@ -902,7 +902,7 @@
                     $('.start-time-fri').val('').hide();
                     $('.end-time-fri').val('').hide();
                     $('.set-time-fri').hide();
-                    $(".tr-friday").css({ backgroundColor: "#FFFFFF" });
+                    $(".tr-friday").css({ backgroundColor: "#EEEEEE" });
                 }
                 if ($('.activate-chat-checkbox-sat').prop('checked') == false) {
                     $('.start-time-sat').val('').hide();
@@ -931,10 +931,10 @@
             });
 
             $('#showAvailabilityBtn').click(function() {
-                if ($('#myIcon').hasClass('fa-chevron-right')) {
-                    $('#myIcon').removeClass('fa-chevron-right'); $('#myIcon').addClass('fa-chevron-down');
+                if ($('#availability-btn-icon').hasClass('fa-chevron-right')) {
+                    $('#availability-btn-icon').removeClass('fa-chevron-right'); $('#availability-btn-icon').addClass('fa-chevron-down');
                 } else {
-                    $('#myIcon').removeClass('fa-chevron-down'); $('#myIcon').addClass('fa-chevron-right');
+                    $('#availability-btn-icon').removeClass('fa-chevron-down'); $('#availability-btn-icon').addClass('fa-chevron-right');
                 }
 
             });
@@ -943,7 +943,7 @@
                 if ($('.activate-chat-checkbox-sun').prop('checked') == true) {
                     $('.start-time-sun').val('9:00 AM').show();
                     $('.end-time-sun').val('5:00 PM').show();
-                    $(".tr-sunday").css({ backgroundColor: "#FFFFFF" });
+                    $(".tr-sunday").css({ backgroundColor: "#FAFAFA" });
                     $('.set-time-sun').show();
                 } else {
                     $('.start-time-sun').val('').hide();
@@ -957,7 +957,7 @@
                 if ($('.activate-chat-checkbox-mon').prop('checked') == true) {
                     $('.start-time-mon').val('9:00 AM').show();
                     $('.end-time-mon').val('5:00 PM').show();
-                    $(".tr-monday").css({ backgroundColor: "#FFFFFF" });
+                    $(".tr-monday").css({ backgroundColor: "#FAFAFA" });
                     $('.set-time-mon').show();
                 } else {
                     $('.start-time-mon').val('').hide();
@@ -971,7 +971,7 @@
                 if ($('.activate-chat-checkbox-tue').prop('checked') == true) {
                     $('.start-time-tue').val('9:00 AM').show();
                     $('.end-time-tue').val('5:00 PM').show();
-                    $(".tr-tuesday").css({ backgroundColor: "#FFFFFF" });
+                    $(".tr-tuesday").css({ backgroundColor: "#FAFAFA" });
                     $('.set-time-tue').show();
                 } else {
                     $('.start-time-tue').val('').hide();
@@ -985,7 +985,7 @@
                 if ($('.activate-chat-checkbox-wed').prop('checked') == true) {
                     $('.start-time-wed').val('9:00 AM').show();
                     $('.end-time-wed').val('5:00 PM').show();
-                    $(".tr-wednesday").css({ backgroundColor: "#FFFFFF" });
+                    $(".tr-wednesday").css({ backgroundColor: "#FAFAFA" });
                     $('.set-time-wed').show();
                 } else {
                     $('.start-time-wed').val('').hide();
@@ -999,7 +999,7 @@
                 if ($('.activate-chat-checkbox-thu').prop('checked') == true) {
                     $('.start-time-thu').val('9:00 AM').show();
                     $('.end-time-thu').val('5:00 PM').show();
-                    $(".tr-thursday").css({ backgroundColor: "#FFFFFF" });
+                    $(".tr-thursday").css({ backgroundColor: "#FAFAFA" });
                     $('.set-time-thu').show();
                 } else {
                     $('.start-time-thu').val('').hide();
@@ -1013,7 +1013,7 @@
                 if ($('.activate-chat-checkbox-fri').prop('checked') == true) {
                     $('.start-time-fri').val('9:00 AM').show();
                     $('.end-time-fri').val('5:00 PM').show();
-                    $(".tr-friday").css({ backgroundColor: "#FFFFFF" });
+                    $(".tr-friday").css({ backgroundColor: "#FAFAFA" });
                     $('.set-time-fri').show();
                 } else {
                     $('.start-time-fri').val('').hide();
@@ -1027,7 +1027,7 @@
                 if ($('.activate-chat-checkbox-sat').prop('checked') == true) {
                     $('.start-time-sat').val('9:00 AM').show();
                     $('.end-time-sat').val('5:00 PM').show();
-                    $(".tr-saturday").css({ backgroundColor: "#FFFFFF" });
+                    $(".tr-saturday").css({ backgroundColor: "#FAFAFA" });
                     $('.set-time-sat').show();
                 } else {
                     $('.start-time-sat').val('').hide();

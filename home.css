@@ -129,14 +129,14 @@
     background: none;
 }
 
-a.input-button:focus,
-a.input-button:hover,
-button#showAvailabilityBtn:hover {
+.input-button:focus,
+.input-button:hover,
+#showAvailabilityBtn:hover {
   background-color: #23547E;
   color: #FFFFFF;
 }
 
-a.input-button {
+.input-button {
     border: 1px solid #2c699d;
     display: inline-block;
     padding: 6px;
@@ -151,56 +151,55 @@ a.input-button {
     margin-top: 6px;
 }
 
-table.availability-table {
+.availability-table {
   background-color: #FAFAFA;
   border: 1px solid #DDDDDD;
 }
 
-span.short-text {
+.short-text {
   display: none;
 }
 
-form>fieldset>section>button#showAvailabilityBtn,
-form>fieldset>section>button#showAvailabilityBtn2 {
+#showAvailabilityBtn {
   background-color: #3276B1;
   color: #FFFFFF;
 }
 
-form>fieldset>section>table.table>tbody>tr>td,
-form>fieldset>section>table.table>thead>tr>th {
+.availability-table>tbody>tr>td,
+.availability-table>thead>tr>th {
   padding: 7px 9px;
 }
 
-table.table>thead>tr>th {
+.availability-table>thead>tr>th {
   font-size: 12.5px;
 }
 
 @media (max-width: 435px) {
-  span.short-text {
+  .short-text {
     display: inline-block;
   }
 
-  span.full-text {
+  .full-text {
     display: none;
   }
 
-  form>fieldset>section>table.table>tbody>tr>td,
-  form>fieldset>section>table.table>thead>tr>th {
+  .availability-table>tbody>tr>td,
+  .availability-table>thead>tr>th {
     padding: 5px 5px;
   }
 }
 
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-sun,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-mon,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-tue,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-wed,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-thu,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-fri,
-.table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-sat {
+.availability-table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-sun,
+.availability-table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-mon,
+.availability-table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-tue,
+.availability-table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-wed,
+.availability-table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-thu,
+.availability-table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-fri,
+.availability-table>tbody>tr>td.weekday>div>input.activate-chat-checkbox-sat {
   margin-top: 3px;
 }
 
-.table>tbody>tr>td.weekday {
+.availability-table>tbody>tr>td.weekday {
   vertical-align: middle;
 }
 
@@ -208,22 +207,16 @@ table.table>thead>tr>th {
   display: flex;
 }
 
-.table>tbody>tr>td>.flex-cell>.hours-select {
-  min-width: 55px;
-  max-width: 90px;
-  margin-right: 3px;
-}
-/* TEMPORARY */
-.table>tbody>tr>td>.flex-cell>.hours-select2 {
+.availability-table>tbody>tr>td>.flex-cell>.hours-select {
   min-width: 54px;
   max-width: 80px;
   height: 30px;
   padding-left: 4px;
   border-color: #DDDDDD;
 }
-/* TEMPORARY */
 
-.table>tbody>tr>td>.flex-cell>.day-or-night {
-  min-width: 41px;
-  max-width: 43px;
+.availability-table>tbody>tr {
+  max-height: 47px;
+  height: 47px;
+  min-height: 47px;
 }
